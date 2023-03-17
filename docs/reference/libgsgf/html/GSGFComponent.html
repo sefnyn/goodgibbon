@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFComponent</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="components.html" title="Components">
+<link rel="prev" href="components.html" title="Components">
+<link rel="next" href="GSGFCollection.html" title="GSGFCollection">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="components.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="components.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFCollection.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFComponent.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFComponent.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFComponent.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GSGFComponent.prerequisites" class="shortcut">Prerequisites</a>
+                   | 
+                  <a href="#GSGFComponent.implementations" class="shortcut">Known Implementations</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFComponent"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFComponent.top_of_page"></a>GSGFComponent</span></h2>
+<p>GSGFComponent — Component of an SGF document.
+Since: 0.1.0</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFComponent.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFComponent.html#GSGFComponent-struct" title="struct GSGFComponent">GSGFComponent</a>;
+struct              <a class="link" href="GSGFComponent.html#GSGFComponentIface" title="struct GSGFComponentIface">GSGFComponentIface</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFComponent.html#gsgf-component-cook" title="gsgf_component_cook ()">gsgf_component_cook</a>                 (<em class="parameter"><code><a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> **culprit</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFComponent.html#gsgf-component-write-stream" title="gsgf_component_write_stream ()">gsgf_component_write_stream</a>         (<em class="parameter"><code>const <a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GOutputStream.html"><span class="type">GOutputStream</span></a> *out</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *bytes_written</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFComponent.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  GInterface
+   +----GSGFComponent
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFComponent.prerequisites"></a><h2>Prerequisites</h2>
+<p>
+GSGFComponent requires
+ <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GSGFComponent.implementations"></a><h2>Known Implementations</h2>
+<p>
+GSGFComponent is implemented by
+ <a class="link" href="GSGFCollection.html" title="GSGFCollection">GSGFCollection</a>,  <a class="link" href="GSGFGameTree.html" title="GSGFGameTree">GSGFGameTree</a>,  <a class="link" href="GSGFNode.html" title="GSGFNode">GSGFNode</a> and  <a class="link" href="GSGFProperty.html" title="GSGFProperty">GSGFProperty</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GSGFComponent.description"></a><h2>Description</h2>
+<p>
+An SGF document consists of a hierarchy of components, ranging from
+<a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> over <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>, <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="type">GSGFNode</span></a>, down to a <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>.
+They all implement the <a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> interface.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFComponent.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFComponent-struct"></a><h3>struct GSGFComponent</h3>
+<pre class="programlisting">struct GSGFComponent;</pre>
+<p>
+Any component of an SGF structure, that is a <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a>,
+a <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>, a <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="type">GSGFNode</span></a>, or a <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFComponentIface"></a><h3>struct GSGFComponentIface</h3>
+<pre class="programlisting">struct GSGFComponentIface {
+        GTypeInterface g_iface;
+
+        /* Virtual table.  */
+        gboolean (*cook) (GSGFComponent *self,
+                          GSGFComponent **culprit,
+                          GError **error);
+
+        gboolean (*write_stream) (const GSGFComponent *self,
+                                  GOutputStream *out,
+                                  gsize *bytes_written,
+                                  GCancellable *cancellable,
+                                  GError **error);
+};
+</pre>
+<p>
+Common methods to all hierarchy levels of an SGF stream.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GTypeInterface"><span class="type">GTypeInterface</span></a> <em class="structfield"><code><a name="GSGFComponentIface.g-iface"></a>g_iface</code></em>;</span></p></td>
+<td>The parent interface.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="GSGFComponentIface.cook"></a>cook</code></em> ()</span></p></td>
+<td>Cook unqualified raw data into structured date.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="structfield"><code><a name="GSGFComponentIface.write-stream"></a>write_stream</code></em> ()</span></p></td>
+<td>Serialize component into an output stream.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-component-cook"></a><h3>gsgf_component_cook ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_component_cook                 (<em class="parameter"><code><a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> **culprit</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+When parsing SGF documents, the document is only checked for well-formedness,
+ignoring all kinds of semantic errors.  The information stored in the
+<a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> that results from parsing is unqualified.
+</p>
+<p>
+Cooking is the process of turning the unqualified information into a
+semantic tree.  Initially, all properties (<a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>) are of type
+<a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a>.  After cooking they are cooked into qualified types like
+<a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a>, <a class="link" href="GSGFSimpleText.html" title="GSGFSimpleText"><span class="type">GSGFSimpleText</span></a>, <a class="link" href="GSGFMove.html" title="GSGFMove"><span class="type">GSGFMove</span></a> and so on.
+</p>
+<p>
+The process of cooking is interrupted as soon as a semantic or other error
+is detected.  If you want to find out the <a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> that caused the
+failure you should pass a location to save the address of the <em class="parameter"><code>culprit</code></em>.
+In doubt, you can try to remove the <a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> or try to repair it.
+You can safely "re-cook" every component.  If it is already qualified,
+nothing will be changed.
+</p>
+<p>
+There are three options for the return value.  A value of <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned
+for failure.  All non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> return values mean success.  Every <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a>
+in the tree is either changed into a qualified <a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a>, or it
+remains unchanged if the property is unknown and cannot be qualified.
+In the special case that you call this interface method on a <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>,
+the return value will differ from the passed-in <em class="parameter"><code>component</code></em>.
+</p>
+<p>
+You should normally call this method on a top-level <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a>.
+In case of failure you have two options: You can bail out, or you can try
+to repair the collection by either modifying certain components or
+by simply deleting the <em class="parameter"><code>culprit</code></em>.  In the latter case you should be aware
+that you may render the data useless.  For example, if you delete one
+move from a game of backgammon, the resulting SGF tree will most probably
+be ruined.  Choose your own poison!
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> to cook.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>culprit</code></em> :</span></p></td>
+<td>Optional location for storing a <a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> that caused the
+operation to fail.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>Optional location to store an error.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for success or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> for failure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-component-write-stream"></a><h3>gsgf_component_write_stream ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_component_write_stream         (<em class="parameter"><code>const <a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GOutputStream.html"><span class="type">GOutputStream</span></a> *out</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *bytes_written</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Serializes a <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> and writes the serialized data into
+a <a href="http://library.gnome.org/devel/gio/unstable/GOutputStream.html"><span class="type">GOutputStream</span></a>.
+</p>
+<p>
+If there is an error during the operation FALSE is returned and <em class="parameter"><code>error</code></em>
+is set to indicate the error status, <em class="parameter"><code>bytes_written</code></em> is updated to contain
+the number of bytes written into the stream before the error occurred.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>out</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/gio/unstable/GOutputStream.html"><span class="type">GOutputStream</span></a> to write to.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bytes_written</code></em> :</span></p></td>
+<td>number of bytes written to the stream.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occurring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success.  <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> if there was an error.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

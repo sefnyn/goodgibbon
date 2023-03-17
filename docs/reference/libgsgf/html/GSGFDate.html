@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFDate</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="sgf-high-level-types.html" title="SGF High Level Types">
+<link rel="prev" href="GSGFResult.html" title="GSGFResult">
+<link rel="next" href="sgf-flavor-api.html" title="SGF Flavor API">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFResult.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="sgf-high-level-types.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="sgf-flavor-api.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFDate.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFDate.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFDate.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFDate"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFDate.top_of_page"></a>GSGFDate</span></h2>
+<p>GSGFDate — Representation of a date (or dates!) in SGF
+Since: 0.1.0</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFDate.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFDate.html#GSGFDate-struct" title="struct GSGFDate">GSGFDate</a>;
+struct              <a class="link" href="GSGFDate.html#GSGFDateClass" title="struct GSGFDateClass">GSGFDateClass</a>;
+struct              <a class="link" href="GSGFDate.html#GSGFDateDMY" title="struct GSGFDateDMY">GSGFDateDMY</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFDate.html#gsgf-date-append" title="gsgf_date_append ()">gsgf_date_append</a>                    (<em class="parameter"><code><a class="link" href="GSGFDate.html" title="GSGFDate"><span class="type">GSGFDate</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GSGFDate.html#GSGFDateDMY" title="struct GSGFDateDMY"><span class="type">GSGFDateDMY</span></a> *date</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="GSGFDate.html" title="GSGFDate"><span class="returnvalue">GSGFDate</span></a> *          <a class="link" href="GSGFDate.html#gsgf-date-new" title="gsgf_date_new ()">gsgf_date_new</a>                       (<em class="parameter"><code><a class="link" href="GSGFDate.html#GSGFDateDMY" title="struct GSGFDateDMY"><span class="type">GSGFDateDMY</span></a> *date</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   <a class="link" href="GSGFDate.html#gsgf-date-new-from-raw" title="gsgf_date_new_from_raw ()">gsgf_date_new_from_raw</a>              (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">struct _GSGFProperty</span> *property</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFDate.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>
+         +----<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue">GSGFCookedValue</a>
+               +----<a class="link" href="GSGFText.html" title="GSGFText">GSGFText</a>
+                     +----<a class="link" href="GSGFSimpleText.html" title="GSGFSimpleText">GSGFSimpleText</a>
+                           +----GSGFDate
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFDate.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFDate.html" title="GSGFDate"><span class="type">GSGFDate</span></a> represents a list of dates with at least one value.
+</p>
+<p>
+The maximum accuracy is one day.  If you need more you have to store this
+externally, for example in the file name.
+</p>
+<p>
+The class uses <a class="link" href="GSGFDate.html#GSGFDateDMY" title="struct GSGFDateDMY"><span class="type">GSGFDateDMY</span></a> for its internal date representation and uses
+the values <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#G-DATE-BAD-MONTH:CAPS"><span class="type">G_DATE_BAD_MONTH</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Date-and-Time-Functions.html#G-DATE-BAD-DAY:CAPS"><span class="type">G_DATE_BAD_DAY</span></a> for month or day of the
+month values not available.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFDate.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFDate-struct"></a><h3>struct GSGFDate</h3>
+<pre class="programlisting">struct GSGFDate;</pre>
+<p>
+One instance of a <a class="link" href="GSGFDate.html" title="GSGFDate"><span class="type">GSGFDate</span></a>.  All properties are private.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFDateClass"></a><h3>struct GSGFDateClass</h3>
+<pre class="programlisting">struct GSGFDateClass {
+};
+</pre>
+<p>
+Representation of a date (or dates!) in SGF!
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFDateDMY"></a><h3>struct GSGFDateDMY</h3>
+<pre class="programlisting">struct GSGFDateDMY {
+        guint day: 6;
+        guint month: 4;
+        guint year: 16;
+};
+</pre>
+<p>
+Broken down representation of a calendar date.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> <em class="structfield"><code><a name="GSGFDateDMY.day"></a>day</code></em> : 6;</span></p></td>
+<td>Day of the month (1-31).</td>
+</tr>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> <em class="structfield"><code><a name="GSGFDateDMY.month"></a>month</code></em> : 4;</span></p></td>
+<td>Month of the year (1-12).</td>
+</tr>
+<tr>
+<td><p><span class="term"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> <em class="structfield"><code><a name="GSGFDateDMY.year"></a>year</code></em> : 16;</span></p></td>
+<td>The year.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-date-append"></a><h3>gsgf_date_append ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_date_append                    (<em class="parameter"><code><a class="link" href="GSGFDate.html" title="GSGFDate"><span class="type">GSGFDate</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GSGFDate.html#GSGFDateDMY" title="struct GSGFDateDMY"><span class="type">GSGFDateDMY</span></a> *date</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Append another <a class="link" href="GSGFDate.html#GSGFDateDMY" title="struct GSGFDateDMY"><span class="type">GSGFDateDMY</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>A <a class="link" href="GSGFDate.html#GSGFDateDMY" title="struct GSGFDateDMY"><span class="type">GSGFDateDMY</span></a> to append to.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>date</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFDate.html#GSGFDateDMY" title="struct GSGFDateDMY"><span class="type">GSGFDateDMY</span></a> to append.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional error location or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> for success, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> for failure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-date-new"></a><h3>gsgf_date_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFDate.html" title="GSGFDate"><span class="returnvalue">GSGFDate</span></a> *          gsgf_date_new                       (<em class="parameter"><code><a class="link" href="GSGFDate.html#GSGFDateDMY" title="struct GSGFDateDMY"><span class="type">GSGFDateDMY</span></a> *date</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Create a new <a class="link" href="GSGFDate.html" title="GSGFDate"><span class="type">GSGFDate</span></a>.  You can initialize a <a class="link" href="GSGFDate.html" title="GSGFDate"><span class="type">GSGFDate</span></a> only with one
+value.  Use <a class="link" href="GSGFDate.html#gsgf-date-append" title="gsgf_date_append ()"><code class="function">gsgf_date_append()</code></a> for events that span over multiple days.
+</p>
+<p>
+The <a class="link" href="GSGFDate.html" title="GSGFDate"><span class="type">GSGFDate</span></a> you pass is copied.  You are responsible for freeing it.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>date</code></em> :</span></p></td>
+<td>An initial <a class="link" href="GSGFDate.html#GSGFDateDMY" title="struct GSGFDateDMY"><span class="type">GSGFDateDMY</span></a> to store.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>An optional location to store an error or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFDate.html" title="GSGFDate"><span class="type">GSGFDate</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-date-new-from-raw"></a><h3>gsgf_date_new_from_raw ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   gsgf_date_new_from_raw              (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">struct _GSGFProperty</span> *property</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFDate.html" title="GSGFDate"><span class="type">GSGFDate</span></a> from a <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a>.  This constructor is only
+interesting for people that write their own <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>raw</code></em> :</span></p></td>
+<td>A <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> containing exactly one value that should be stored.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flavor</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> of the current <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> <em class="parameter"><code>raw</code></em> came from.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occurring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFDate.html" title="GSGFDate"><span class="type">GSGFDate</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> in case of an error.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

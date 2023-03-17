@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE book PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "">
+<book xmlns="http://www.devhelp.net/book" title="LIBGSGF Reference Manual" link="index.html" author="" name="libgsgf" version="2" language="c">
+  <chapters>
+    <sub name="LIBGSGF Overview" link="pt01.html">
+      <sub name="Introduction" link="ch01.html"/>
+      <sub name="Basic Structure of SGF and SGF Flavors" link="ch02.html"/>
+      <sub name="SGF Limitations and Shortcomings" link="ch03.html"/>
+    </sub>
+    <sub name="API Reference" link="api-reference.html">
+      <sub name="Components" link="components.html">
+        <sub name="GSGFComponent" link="GSGFComponent.html"/>
+        <sub name="GSGFCollection" link="GSGFCollection.html"/>
+        <sub name="GSGFGameTree" link="GSGFGameTree.html"/>
+        <sub name="GSGFNode" link="GSGFNode.html"/>
+        <sub name="GSGFProperty" link="GSGFProperty.html"/>
+      </sub>
+      <sub name="SGF Primitives" link="sgf-primitives.html">
+        <sub name="GSGFValue" link="GSGFValue.html"/>
+        <sub name="GSGFRaw" link="GSGFRaw.html"/>
+        <sub name="GSGFCookedValue" link="GSGFCookedValue.html"/>
+        <sub name="GSGFNumber" link="GSGFNumber.html"/>
+        <sub name="GSGFReal" link="GSGFReal.html"/>
+        <sub name="GSGFText" link="GSGFText.html"/>
+        <sub name="GSGFSimpleText" link="GSGFSimpleText.html"/>
+        <sub name="GSGFCompose" link="GSGFCompose.html"/>
+        <sub name="GSGFEmpty" link="GSGFEmpty.html"/>
+        <sub name="GSGFListOf" link="GSGFListOf.html"/>
+      </sub>
+      <sub name="SGF High Level Types" link="sgf-high-level-types.html">
+        <sub name="GSGFColor" link="GSGFColor.html"/>
+        <sub name="GSGFDouble" link="GSGFDouble.html"/>
+        <sub name="GSGFResult" link="GSGFResult.html"/>
+        <sub name="GSGFDate" link="GSGFDate.html"/>
+      </sub>
+      <sub name="SGF Flavor API" link="sgf-flavor-api.html">
+        <sub name="GSGFFlavor" link="GSGFFlavor.html"/>
+        <sub name="GSGFMove" link="GSGFMove.html"/>
+        <sub name="GSGFPoint" link="GSGFPoint.html"/>
+        <sub name="GSGFStone" link="GSGFStone.html"/>
+      </sub>
+      <sub name="Backgammon Flavor" link="backgammon-flavor.html">
+        <sub name="GSGFFlavorBackgammon" link="GSGFFlavorBackgammon.html"/>
+        <sub name="GSGFMoveBackgammon" link="GSGFMoveBackgammon.html"/>
+        <sub name="GSGFPointBackgammon" link="GSGFPointBackgammon.html"/>
+        <sub name="GSGFStoneBackgammon" link="GSGFStoneBackgammon.html"/>
+      </sub>
+      <sub name="Miscellaneous" link="miscellaneous.html">
+        <sub name="GSGFError" link="libgsgf-GSGFError.html"/>
+        <sub name="Utility Functions" link="libgsgf-Utility-Functions.html"/>
+      </sub>
+    </sub>
+    <sub name="SGF Flavors" link="pt03.html">
+      <sub name="General SGF Properties" link="general-properties.html">
+        <sub name="Move Properties" link="general-properties.html#move-properties"/>
+        <sub name="Setup Properties" link="setup-properties.html"/>
+        <sub name="Node Annotation Properties" link="node-annotation-properties.html"/>
+        <sub name="Move Annotation Properties" link="move-annotation-properties.html"/>
+        <sub name="Markup Properties" link="markup-properties.html"/>
+        <sub name="Root Properties" link="root-properties.html"/>
+        <sub name="Game Info Properties" link="game-info-properties.html"/>
+        <sub name="Timing Properties" link="timing-properties.html"/>
+        <sub name="Miscellaneous Properties" link="misc-properties.html"/>
+      </sub>
+      <sub name="Backgammon Properties" link="backgammon-properties.html">
+        <sub name="Game Info Properties" link="backgammon-properties.html#bg-game-info-properties"/>
+        <sub name="Node Annotation Properties" link="bg-node-annotation-properties.html"/>
+        <sub name="Setup Properties" link="bg-setup-properties.html"/>
+      </sub>
+    </sub>
+    <sub name="API Index" link="api-index-full.html"/>
+    <sub name="Index of deprecated API" link="deprecated-api-index.html"/>
+    <sub name="Annotation Glossary" link="annotation-glossary.html"/>
+  </chapters>
+  <functions>
+    <keyword type="struct" name="struct GSGFComponent" link="GSGFComponent.html#GSGFComponent-struct"/>
+    <keyword type="struct" name="struct GSGFComponentIface" link="GSGFComponent.html#GSGFComponentIface"/>
+    <keyword type="function" name="gsgf_component_cook ()" link="GSGFComponent.html#gsgf-component-cook"/>
+    <keyword type="function" name="gsgf_component_write_stream ()" link="GSGFComponent.html#gsgf-component-write-stream"/>
+    <keyword type="struct" name="struct GSGFCollection" link="GSGFCollection.html#GSGFCollection-struct"/>
+    <keyword type="struct" name="struct GSGFCollectionClass" link="GSGFCollection.html#GSGFCollectionClass"/>
+    <keyword type="function" name="gsgf_collection_add_game_tree ()" link="GSGFCollection.html#gsgf-collection-add-game-tree"/>
+    <keyword type="function" name="gsgf_collection_get_game_trees ()" link="GSGFCollection.html#gsgf-collection-get-game-trees"/>
+    <keyword type="function" name="gsgf_collection_new ()" link="GSGFCollection.html#gsgf-collection-new"/>
+    <keyword type="function" name="gsgf_collection_parse_file ()" link="GSGFCollection.html#gsgf-collection-parse-file"/>
+    <keyword type="function" name="gsgf_collection_parse_stream ()" link="GSGFCollection.html#gsgf-collection-parse-stream"/>
+    <keyword type="struct" name="struct GSGFGameTree" link="GSGFGameTree.html#GSGFGameTree-struct"/>
+    <keyword type="struct" name="struct GSGFGameTreeClass" link="GSGFGameTree.html#GSGFGameTreeClass"/>
+    <keyword type="function" name="gsgf_game_tree_add_child ()" link="GSGFGameTree.html#gsgf-game-tree-add-child"/>
+    <keyword type="function" name="gsgf_game_tree_add_node ()" link="GSGFGameTree.html#gsgf-game-tree-add-node"/>
+    <keyword type="function" name="gsgf_game_tree_get_children ()" link="GSGFGameTree.html#gsgf-game-tree-get-children"/>
+    <keyword type="function" name="gsgf_game_tree_get_flavor ()" link="GSGFGameTree.html#gsgf-game-tree-get-flavor"/>
+    <keyword type="function" name="gsgf_game_tree_get_last_node ()" link="GSGFGameTree.html#gsgf-game-tree-get-last-node" since="0.2.0"/>
+    <keyword type="function" name="gsgf_game_tree_get_nodes ()" link="GSGFGameTree.html#gsgf-game-tree-get-nodes"/>
+    <keyword type="function" name="gsgf_game_tree_get_parent ()" link="GSGFGameTree.html#gsgf-game-tree-get-parent"/>
+    <keyword type="function" name="gsgf_game_tree_set_application ()" link="GSGFGameTree.html#gsgf-game-tree-set-application"/>
+    <keyword type="struct" name="struct GSGFNode" link="GSGFNode.html#GSGFNode-struct"/>
+    <keyword type="struct" name="struct GSGFNodeClass" link="GSGFNode.html#GSGFNodeClass"/>
+    <keyword type="function" name="gsgf_node_add_property ()" link="GSGFNode.html#gsgf-node-add-property"/>
+    <keyword type="function" name="gsgf_node_get_flavor ()" link="GSGFNode.html#gsgf-node-get-flavor"/>
+    <keyword type="function" name="gsgf_node_get_game_tree ()" link="GSGFNode.html#gsgf-node-get-game-tree"/>
+    <keyword type="function" name="gsgf_node_get_previous_node ()" link="GSGFNode.html#gsgf-node-get-previous-node"/>
+    <keyword type="function" name="gsgf_node_get_property ()" link="GSGFNode.html#gsgf-node-get-property"/>
+    <keyword type="function" name="gsgf_node_get_property_ids ()" link="GSGFNode.html#gsgf-node-get-property-ids"/>
+    <keyword type="function" name="gsgf_node_get_property_value ()" link="GSGFNode.html#gsgf-node-get-property-value"/>
+    <keyword type="function" name="gsgf_node_remove_property ()" link="GSGFNode.html#gsgf-node-remove-property"/>
+    <keyword type="function" name="gsgf_node_set_property ()" link="GSGFNode.html#gsgf-node-set-property"/>
+    <keyword type="struct" name="struct GSGFProperty" link="GSGFProperty.html#GSGFProperty-struct"/>
+    <keyword type="struct" name="struct GSGFPropertyClass" link="GSGFProperty.html#GSGFPropertyClass"/>
+    <keyword type="function" name="gsgf_property_get_id ()" link="GSGFProperty.html#gsgf-property-get-id"/>
+    <keyword type="function" name="gsgf_property_get_node ()" link="GSGFProperty.html#gsgf-property-get-node"/>
+    <keyword type="function" name="gsgf_property_get_value ()" link="GSGFProperty.html#gsgf-property-get-value"/>
+    <keyword type="function" name="gsgf_property_set_value ()" link="GSGFProperty.html#gsgf-property-set-value"/>
+    <keyword type="struct" name="struct GSGFValue" link="GSGFValue.html#GSGFValue-struct"/>
+    <keyword type="struct" name="struct GSGFValueClass" link="GSGFValue.html#GSGFValueClass"/>
+    <keyword type="function" name="gsgf_value_write_stream ()" link="GSGFValue.html#gsgf-value-write-stream"/>
+    <keyword type="struct" name="struct GSGFRaw" link="GSGFRaw.html#GSGFRaw-struct"/>
+    <keyword type="struct" name="struct GSGFRawClass" link="GSGFRaw.html#GSGFRawClass"/>
+    <keyword type="function" name="gsgf_raw_add_value ()" link="GSGFRaw.html#gsgf-raw-add-value"/>
+    <keyword type="function" name="gsgf_raw_get_number_of_values ()" link="GSGFRaw.html#gsgf-raw-get-number-of-values"/>
+    <keyword type="function" name="gsgf_raw_get_value ()" link="GSGFRaw.html#gsgf-raw-get-value"/>
+    <keyword type="function" name="gsgf_raw_new ()" link="GSGFRaw.html#gsgf-raw-new"/>
+    <keyword type="struct" name="struct GSGFCookedValue" link="GSGFCookedValue.html#GSGFCookedValue-struct"/>
+    <keyword type="struct" name="struct GSGFCookedValueClass" link="GSGFCookedValue.html#GSGFCookedValueClass"/>
+    <keyword type="struct" name="struct GSGFNumber" link="GSGFNumber.html#GSGFNumber-struct"/>
+    <keyword type="struct" name="struct GSGFNumberClass" link="GSGFNumber.html#GSGFNumberClass"/>
+    <keyword type="function" name="gsgf_number_get_value ()" link="GSGFNumber.html#gsgf-number-get-value"/>
+    <keyword type="function" name="gsgf_number_new ()" link="GSGFNumber.html#gsgf-number-new"/>
+    <keyword type="function" name="gsgf_number_new_from_raw ()" link="GSGFNumber.html#gsgf-number-new-from-raw"/>
+    <keyword type="function" name="gsgf_number_set_value ()" link="GSGFNumber.html#gsgf-number-set-value"/>
+    <keyword type="struct" name="struct GSGFReal" link="GSGFReal.html#GSGFReal-struct"/>
+    <keyword type="struct" name="struct GSGFRealClass" link="GSGFReal.html#GSGFRealClass"/>
+    <keyword type="function" name="gsgf_real_get_value ()" link="GSGFReal.html#gsgf-real-get-value"/>
+    <keyword type="function" name="gsgf_real_new ()" link="GSGFReal.html#gsgf-real-new"/>
+    <keyword type="function" name="gsgf_real_new_from_raw ()" link="GSGFReal.html#gsgf-real-new-from-raw"/>
+    <keyword type="function" name="gsgf_real_set_value ()" link="GSGFReal.html#gsgf-real-set-value"/>
+    <keyword type="function" name="gsgf_real_to_string ()" link="GSGFReal.html#gsgf-real-to-string"/>
+    <keyword type="struct" name="struct GSGFText" link="GSGFText.html#GSGFText-struct"/>
+    <keyword type="struct" name="struct GSGFTextClass" link="GSGFText.html#GSGFTextClass"/>
+    <keyword type="function" name="gsgf_text_get_value ()" link="GSGFText.html#gsgf-text-get-value"/>
+    <keyword type="function" name="gsgf_text_new ()" link="GSGFText.html#gsgf-text-new"/>
+    <keyword type="function" name="gsgf_text_new_from_raw ()" link="GSGFText.html#gsgf-text-new-from-raw"/>
+    <keyword type="function" name="gsgf_text_set_value ()" link="GSGFText.html#gsgf-text-set-value"/>
+    <keyword type="struct" name="struct GSGFSimpleText" link="GSGFSimpleText.html#GSGFSimpleText-struct"/>
+    <keyword type="struct" name="struct GSGFSimpleTextClass" link="GSGFSimpleText.html#GSGFSimpleTextClass"/>
+    <keyword type="function" name="gsgf_simple_text_new ()" link="GSGFSimpleText.html#gsgf-simple-text-new"/>
+    <keyword type="function" name="gsgf_simple_text_new_from_raw ()" link="GSGFSimpleText.html#gsgf-simple-text-new-from-raw"/>
+    <keyword type="struct" name="struct GSGFCompose" link="GSGFCompose.html#GSGFCompose-struct"/>
+    <keyword type="struct" name="struct GSGFComposeClass" link="GSGFCompose.html#GSGFComposeClass"/>
+    <keyword type="function" name="gsgf_compose_get_number_of_values ()" link="GSGFCompose.html#gsgf-compose-get-number-of-values"/>
+    <keyword type="function" name="gsgf_compose_get_value ()" link="GSGFCompose.html#gsgf-compose-get-value"/>
+    <keyword type="function" name="gsgf_compose_new ()" link="GSGFCompose.html#gsgf-compose-new"/>
+    <keyword type="struct" name="struct GSGFEmpty" link="GSGFEmpty.html#GSGFEmpty-struct"/>
+    <keyword type="struct" name="struct GSGFEmptyClass" link="GSGFEmpty.html#GSGFEmptyClass"/>
+    <keyword type="function" name="gsgf_empty_new ()" link="GSGFEmpty.html#gsgf-empty-new"/>
+    <keyword type="function" name="gsgf_empty_new_from_raw ()" link="GSGFEmpty.html#gsgf-empty-new-from-raw"/>
+    <keyword type="struct" name="struct GSGFListOf" link="GSGFListOf.html#GSGFListOf-struct"/>
+    <keyword type="struct" name="struct GSGFListOfClass" link="GSGFListOf.html#GSGFListOfClass"/>
+    <keyword type="function" name="gsgf_list_of_append ()" link="GSGFListOf.html#gsgf-list-of-append"/>
+    <keyword type="function" name="gsgf_list_of_get_item_type ()" link="GSGFListOf.html#gsgf-list-of-get-item-type"/>
+    <keyword type="function" name="gsgf_list_of_get_nth_item ()" link="GSGFListOf.html#gsgf-list-of-get-nth-item"/>
+    <keyword type="function" name="gsgf_list_of_get_number_of_items ()" link="GSGFListOf.html#gsgf-list-of-get-number-of-items"/>
+    <keyword type="function" name="gsgf_list_of_new ()" link="GSGFListOf.html#gsgf-list-of-new"/>
+    <keyword type="struct" name="struct GSGFColor" link="GSGFColor.html#GSGFColor-struct"/>
+    <keyword type="struct" name="struct GSGFColorClass" link="GSGFColor.html#GSGFColorClass"/>
+    <keyword type="enum" name="enum GSGFColorEnum" link="GSGFColor.html#GSGFColorEnum"/>
+    <keyword type="function" name="gsgf_color_get_color ()" link="GSGFColor.html#gsgf-color-get-color"/>
+    <keyword type="function" name="gsgf_color_new ()" link="GSGFColor.html#gsgf-color-new"/>
+    <keyword type="function" name="gsgf_color_new_from_raw ()" link="GSGFColor.html#gsgf-color-new-from-raw"/>
+    <keyword type="struct" name="struct GSGFDouble" link="GSGFDouble.html#GSGFDouble-struct"/>
+    <keyword type="struct" name="struct GSGFDoubleClass" link="GSGFDouble.html#GSGFDoubleClass"/>
+    <keyword type="enum" name="enum GSGFDoubleEnum" link="GSGFDouble.html#GSGFDoubleEnum"/>
+    <keyword type="function" name="gsgf_double_get_value ()" link="GSGFDouble.html#gsgf-double-get-value"/>
+    <keyword type="function" name="gsgf_double_new ()" link="GSGFDouble.html#gsgf-double-new"/>
+    <keyword type="function" name="gsgf_double_new_from_raw ()" link="GSGFDouble.html#gsgf-double-new-from-raw"/>
+    <keyword type="function" name="gsgf_double_set_value ()" link="GSGFDouble.html#gsgf-double-set-value"/>
+    <keyword type="struct" name="struct GSGFResult" link="GSGFResult.html#GSGFResult-struct"/>
+    <keyword type="enum" name="enum GSGFResultCause" link="GSGFResult.html#GSGFResultCause"/>
+    <keyword type="struct" name="struct GSGFResultClass" link="GSGFResult.html#GSGFResultClass"/>
+    <keyword type="enum" name="enum GSGFResultWinner" link="GSGFResult.html#GSGFResultWinner"/>
+    <keyword type="function" name="gsgf_result_get_cause ()" link="GSGFResult.html#gsgf-result-get-cause"/>
+    <keyword type="function" name="gsgf_result_get_score ()" link="GSGFResult.html#gsgf-result-get-score"/>
+    <keyword type="function" name="gsgf_result_get_winner ()" link="GSGFResult.html#gsgf-result-get-winner"/>
+    <keyword type="function" name="gsgf_result_new ()" link="GSGFResult.html#gsgf-result-new"/>
+    <keyword type="function" name="gsgf_result_new_from_raw ()" link="GSGFResult.html#gsgf-result-new-from-raw"/>
+    <keyword type="struct" name="struct GSGFDate" link="GSGFDate.html#GSGFDate-struct"/>
+    <keyword type="struct" name="struct GSGFDateClass" link="GSGFDate.html#GSGFDateClass"/>
+    <keyword type="struct" name="struct GSGFDateDMY" link="GSGFDate.html#GSGFDateDMY"/>
+    <keyword type="function" name="gsgf_date_append ()" link="GSGFDate.html#gsgf-date-append"/>
+    <keyword type="function" name="gsgf_date_new ()" link="GSGFDate.html#gsgf-date-new"/>
+    <keyword type="function" name="gsgf_date_new_from_raw ()" link="GSGFDate.html#gsgf-date-new-from-raw"/>
+    <keyword type="struct" name="struct GSGFFlavor" link="GSGFFlavor.html#GSGFFlavor-struct"/>
+    <keyword type="struct" name="struct GSGFFlavorClass" link="GSGFFlavor.html#GSGFFlavorClass"/>
+    <keyword type="function" name="gsgf_flavor_get_cooked_value ()" link="GSGFFlavor.html#gsgf-flavor-get-cooked-value"/>
+    <keyword type="function" name="gsgf_flavor_get_game_id ()" link="GSGFFlavor.html#gsgf-flavor-get-game-id"/>
+    <keyword type="function" name="gsgf_flavor_new ()" link="GSGFFlavor.html#gsgf-flavor-new"/>
+    <keyword type="struct" name="struct GSGFMove" link="GSGFMove.html#GSGFMove-struct"/>
+    <keyword type="struct" name="struct GSGFMoveClass" link="GSGFMove.html#GSGFMoveClass"/>
+    <keyword type="struct" name="struct GSGFPoint" link="GSGFPoint.html#GSGFPoint-struct"/>
+    <keyword type="struct" name="struct GSGFPointClass" link="GSGFPoint.html#GSGFPointClass"/>
+    <keyword type="function" name="gsgf_point_get_normalized_value ()" link="GSGFPoint.html#gsgf-point-get-normalized-value"/>
+    <keyword type="struct" name="struct GSGFStone" link="GSGFStone.html#GSGFStone-struct"/>
+    <keyword type="struct" name="struct GSGFStoneClass" link="GSGFStone.html#GSGFStoneClass"/>
+    <keyword type="struct" name="struct GSGFFlavorBackgammon" link="GSGFFlavorBackgammon.html#GSGFFlavorBackgammon-struct"/>
+    <keyword type="struct" name="struct GSGFFlavorBackgammonClass" link="GSGFFlavorBackgammon.html#GSGFFlavorBackgammonClass"/>
+    <keyword type="function" name="gsgf_flavor_backgammon_new ()" link="GSGFFlavorBackgammon.html#gsgf-flavor-backgammon-new"/>
+    <keyword type="struct" name="struct GSGFMoveBackgammon" link="GSGFMoveBackgammon.html#GSGFMoveBackgammon-struct"/>
+    <keyword type="struct" name="struct GSGFMoveBackgammonClass" link="GSGFMoveBackgammon.html#GSGFMoveBackgammonClass"/>
+    <keyword type="function" name="gsgf_move_backgammon_get_die ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-get-die"/>
+    <keyword type="function" name="gsgf_move_backgammon_get_from ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-get-from"/>
+    <keyword type="function" name="gsgf_move_backgammon_get_num_moves ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-get-num-moves"/>
+    <keyword type="function" name="gsgf_move_backgammon_get_to ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-get-to"/>
+    <keyword type="function" name="gsgf_move_backgammon_is_accept ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-accept"/>
+    <keyword type="function" name="gsgf_move_backgammon_is_double ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-double"/>
+    <keyword type="function" name="gsgf_move_backgammon_is_drop ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-drop"/>
+    <keyword type="function" name="gsgf_move_backgammon_is_regular ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-regular"/>
+    <keyword type="function" name="gsgf_move_backgammon_is_reject ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-reject"/>
+    <keyword type="function" name="gsgf_move_backgammon_is_resign ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-resign" since="0.2.0"/>
+    <keyword type="function" name="gsgf_move_backgammon_is_take ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-take"/>
+    <keyword type="function" name="gsgf_move_backgammon_new ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-new"/>
+    <keyword type="function" name="gsgf_move_backgammon_new_from_raw ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-new-from-raw"/>
+    <keyword type="function" name="gsgf_move_backgammon_new_from_string ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-new-from-string" since="0.2.0"/>
+    <keyword type="function" name="gsgf_move_backgammon_new_regular ()" link="GSGFMoveBackgammon.html#gsgf-move-backgammon-new-regular" since="0.2.0"/>
+    <keyword type="struct" name="struct GSGFPointBackgammon" link="GSGFPointBackgammon.html#GSGFPointBackgammon-struct"/>
+    <keyword type="struct" name="struct GSGFPointBackgammonClass" link="GSGFPointBackgammon.html#GSGFPointBackgammonClass"/>
+    <keyword type="function" name="gsgf_point_backgammon_append_to_list_of ()" link="GSGFPointBackgammon.html#gsgf-point-backgammon-append-to-list-of"/>
+    <keyword type="function" name="gsgf_point_backgammon_get_point ()" link="GSGFPointBackgammon.html#gsgf-point-backgammon-get-point"/>
+    <keyword type="function" name="gsgf_point_backgammon_new ()" link="GSGFPointBackgammon.html#gsgf-point-backgammon-new"/>
+    <keyword type="function" name="gsgf_point_backgammon_new_from_raw ()" link="GSGFPointBackgammon.html#gsgf-point-backgammon-new-from-raw"/>
+    <keyword type="struct" name="struct GSGFStoneBackgammon" link="GSGFStoneBackgammon.html#GSGFStoneBackgammon-struct"/>
+    <keyword type="struct" name="struct GSGFStoneBackgammonClass" link="GSGFStoneBackgammon.html#GSGFStoneBackgammonClass"/>
+    <keyword type="function" name="gsgf_stone_backgammon_get_stone ()" link="GSGFStoneBackgammon.html#gsgf-stone-backgammon-get-stone"/>
+    <keyword type="function" name="gsgf_stone_backgammon_new ()" link="GSGFStoneBackgammon.html#gsgf-stone-backgammon-new"/>
+    <keyword type="function" name="gsgf_stone_backgammon_new_from_raw ()" link="GSGFStoneBackgammon.html#gsgf-stone-backgammon-new-from-raw"/>
+    <keyword type="enum" name="enum GSGFError" link="libgsgf-GSGFError.html#GSGFError"/>
+    <keyword type="macro" name="GSGF_ERROR" link="libgsgf-GSGFError.html#GSGF-ERROR:CAPS"/>
+    <keyword type="function" name="gsgf_error_quark ()" link="libgsgf-GSGFError.html#gsgf-error-quark"/>
+    <keyword type="function" name="gsgf_ascii_dtostring ()" link="libgsgf-Utility-Functions.html#gsgf-ascii-dtostring" since="0.2.0"/>
+    <keyword type="function" name="gsgf_threads_init ()" link="libgsgf-Utility-Functions.html#gsgf-threads-init" since="0.2.0"/>
+    <keyword type="function" name="gsgf_util_read_simple_text ()" link="libgsgf-Utility-Functions.html#gsgf-util-read-simple-text"/>
+    <keyword type="function" name="gsgf_util_read_text ()" link="libgsgf-Utility-Functions.html#gsgf-util-read-text"/>
+    <keyword type="constant" name="GSGF_COLOR_WHITE" link="GSGFColor.html#GSGF-COLOR-WHITE:CAPS"/>
+    <keyword type="constant" name="GSGF_COLOR_BLACK" link="GSGFColor.html#GSGF-COLOR-BLACK:CAPS"/>
+    <keyword type="constant" name="GSGF_DOUBLE_NORMAL" link="GSGFDouble.html#GSGF-DOUBLE-NORMAL:CAPS"/>
+    <keyword type="constant" name="GSGF_DOUBLE_VERY" link="GSGFDouble.html#GSGF-DOUBLE-VERY:CAPS"/>
+    <keyword type="constant" name="GSGF_RESULT_NORMAL" link="GSGFResult.html#GSGF-RESULT-NORMAL:CAPS"/>
+    <keyword type="constant" name="GSGF_RESULT_RESIGNATION" link="GSGFResult.html#GSGF-RESULT-RESIGNATION:CAPS"/>
+    <keyword type="constant" name="GSGF_RESULT_TIME" link="GSGFResult.html#GSGF-RESULT-TIME:CAPS"/>
+    <keyword type="constant" name="GSGF_RESULT_FORFEIT" link="GSGFResult.html#GSGF-RESULT-FORFEIT:CAPS"/>
+    <keyword type="constant" name="GSGF_RESULT_OTHER" link="GSGFResult.html#GSGF-RESULT-OTHER:CAPS"/>
+    <keyword type="constant" name="GSGF_RESULT_BLACK" link="GSGFResult.html#GSGF-RESULT-BLACK:CAPS"/>
+    <keyword type="constant" name="GSGF_RESULT_WHITE" link="GSGFResult.html#GSGF-RESULT-WHITE:CAPS"/>
+    <keyword type="constant" name="GSGF_RESULT_DRAW" link="GSGFResult.html#GSGF-RESULT-DRAW:CAPS"/>
+    <keyword type="constant" name="GSGF_RESULT_VOID" link="GSGFResult.html#GSGF-RESULT-VOID:CAPS"/>
+    <keyword type="constant" name="GSGF_RESULT_UNKNOWN" link="GSGFResult.html#GSGF-RESULT-UNKNOWN:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_NONE" link="libgsgf-GSGFError.html#GSGF-ERROR-NONE:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_FLAVOR_UNSUPPORTED" link="libgsgf-GSGFError.html#GSGF-ERROR-FLAVOR-UNSUPPORTED:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_FLAVOR_MISMATCH" link="libgsgf-GSGFError.html#GSGF-ERROR-FLAVOR-MISMATCH:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_SYNTAX" link="libgsgf-GSGFError.html#GSGF-ERROR-SYNTAX:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_EMPTY_COLLECTION" link="libgsgf-GSGFError.html#GSGF-ERROR-EMPTY-COLLECTION:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_PROPERTY_EXISTS" link="libgsgf-GSGFError.html#GSGF-ERROR-PROPERTY-EXISTS:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_EMPTY_PROPERTY" link="libgsgf-GSGFError.html#GSGF-ERROR-EMPTY-PROPERTY:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_INTERNAL_ERROR" link="libgsgf-GSGFError.html#GSGF-ERROR-INTERNAL-ERROR:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_INVALID_NUMBER" link="libgsgf-GSGFError.html#GSGF-ERROR-INVALID-NUMBER:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_NAN" link="libgsgf-GSGFError.html#GSGF-ERROR-NAN:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_LIST_TOO_LONG" link="libgsgf-GSGFError.html#GSGF-ERROR-LIST-TOO-LONG:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_LIST_EMPTY" link="libgsgf-GSGFError.html#GSGF-ERROR-LIST-EMPTY:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_SEMANTIC_ERROR" link="libgsgf-GSGFError.html#GSGF-ERROR-SEMANTIC-ERROR:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_INVALID_MOVE" link="libgsgf-GSGFError.html#GSGF-ERROR-INVALID-MOVE:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_INVALID_POINT" link="libgsgf-GSGFError.html#GSGF-ERROR-INVALID-POINT:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_INVALID_STONE" link="libgsgf-GSGFError.html#GSGF-ERROR-INVALID-STONE:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_USAGE_ERROR" link="libgsgf-GSGFError.html#GSGF-ERROR-USAGE-ERROR:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_NON_UNIQUE_POINT" link="libgsgf-GSGFError.html#GSGF-ERROR-NON-UNIQUE-POINT:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_NON_UNIQUE_STONE" link="libgsgf-GSGFError.html#GSGF-ERROR-NON-UNIQUE-STONE:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_DOUBLE_OUT_OF_RANGE" link="libgsgf-GSGFError.html#GSGF-ERROR-DOUBLE-OUT-OF-RANGE:CAPS"/>
+    <keyword type="constant" name="GSGF_ERROR_INVALID_DATE_FORMAT" link="libgsgf-GSGFError.html#GSGF-ERROR-INVALID-DATE-FORMAT:CAPS"/>
+  </functions>
+</book>

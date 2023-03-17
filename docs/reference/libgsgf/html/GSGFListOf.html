@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFListOf</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="sgf-primitives.html" title="SGF Primitives">
+<link rel="prev" href="GSGFEmpty.html" title="GSGFEmpty">
+<link rel="next" href="sgf-high-level-types.html" title="SGF High Level Types">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFEmpty.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="sgf-primitives.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="sgf-high-level-types.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFListOf.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFListOf.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFListOf.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFListOf"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFListOf.top_of_page"></a>GSGFListOf</span></h2>
+<p>GSGFListOf — ListOf data in SGF files.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFListOf.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFListOf.html#GSGFListOf-struct" title="struct GSGFListOf">GSGFListOf</a>;
+struct              <a class="link" href="GSGFListOf.html#GSGFListOfClass" title="struct GSGFListOfClass">GSGFListOfClass</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFListOf.html#gsgf-list-of-append" title="gsgf_list_of_append ()">gsgf_list_of_append</a>                 (<em class="parameter"><code><a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a> *item</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               <a class="link" href="GSGFListOf.html#gsgf-list-of-get-item-type" title="gsgf_list_of_get_item_type ()">gsgf_list_of_get_item_type</a>          (<em class="parameter"><code>const <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> *self</code></em>);
+<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   <a class="link" href="GSGFListOf.html#gsgf-list-of-get-nth-item" title="gsgf_list_of_get_nth_item ()">gsgf_list_of_get_nth_item</a>           (<em class="parameter"><code>const <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>               <a class="link" href="GSGFListOf.html#gsgf-list-of-get-number-of-items" title="gsgf_list_of_get_number_of_items ()">gsgf_list_of_get_number_of_items</a>    (<em class="parameter"><code>const <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> *self</code></em>);
+<a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="returnvalue">GSGFListOf</span></a> *        <a class="link" href="GSGFListOf.html#gsgf-list-of-new" title="gsgf_list_of_new ()">gsgf_list_of_new</a>                    (<em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFListOf.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>
+         +----<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue">GSGFCookedValue</a>
+               +----GSGFListOf
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFListOf.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> is a list of <a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a> objects.
+</p>
+<p>
+The SGF specification has another type elist.  This is a list that can
+possibly be empty.  In libgsgf, there is no corresponding type for this.
+Whether a list can be empty or not is considered to be part of the
+semantics.
+</p>
+<p>
+You can detect empty lists by checking the item type with
+<a class="link" href="GSGFListOf.html#gsgf-list-of-get-item-type" title="gsgf_list_of_get_item_type ()"><code class="function">gsgf_list_of_get_item_type()</code></a>.  If it is  <span class="type">GSGF_TYPE_EMPTY</span> the list is
+empty.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFListOf.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFListOf-struct"></a><h3>struct GSGFListOf</h3>
+<pre class="programlisting">struct GSGFListOf;</pre>
+<p>
+One instance of a <a class="link" href="GSGFListOf.html#GSGFListOfClass" title="struct GSGFListOfClass"><span class="type">GSGFListOfClass</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFListOfClass"></a><h3>struct GSGFListOfClass</h3>
+<pre class="programlisting">struct GSGFListOfClass {
+};
+</pre>
+<p>
+Class representing a list_of of SGF.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-list-of-append"></a><h3>gsgf_list_of_append ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_list_of_append                 (<em class="parameter"><code><a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a> *item</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Append a <a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a> to a <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> object.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>item</code></em> :</span></p></td>
+<td>The item to store.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>Optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for success, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> for failure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-list-of-get-item-type"></a><h3>gsgf_list_of_get_item_type ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="returnvalue">GType</span></a>               gsgf_list_of_get_item_type          (<em class="parameter"><code>const <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> *self</code></em>);</pre>
+<p>
+Get the type of items stored in the list.  This is the type that is expected
+when you add items with <a class="link" href="GSGFListOf.html#gsgf-list-of-append" title="gsgf_list_of_append ()"><code class="function">gsgf_list_of_append()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> object.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The <a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> of the items stored.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-list-of-get-nth-item"></a><h3>gsgf_list_of_get_nth_item ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   gsgf_list_of_get_nth_item           (<em class="parameter"><code>const <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);</pre>
+<p>
+Retrieve the value stored at position <em class="parameter"><code>i</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> object.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>i</code></em> :</span></p></td>
+<td>Position in the property list.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The value stored at position <em class="parameter"><code>i</code></em> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-list-of-get-number-of-items"></a><h3>gsgf_list_of_get_number_of_items ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>               gsgf_list_of_get_number_of_items    (<em class="parameter"><code>const <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> *self</code></em>);</pre>
+<p>
+Get the number of items.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> object.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The number of values stored.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-list-of-new"></a><h3>gsgf_list_of_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="returnvalue">GSGFListOf</span></a> *        gsgf_list_of_new                    (<em class="parameter"><code><a href="http://library.gnome.org/devel/gobject/unstable/gobject-Type-Information.html#GType"><span class="type">GType</span></a> type</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a> that is prepared for storing items of type
+<em class="parameter"><code>type</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>type</code></em> :</span></p></td>
+<td>Type of items.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flavor</code></em> :</span></p></td>
+<td>
+<a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> that this list belongs to.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFListOf.html" title="GSGFListOf"><span class="type">GSGFListOf</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

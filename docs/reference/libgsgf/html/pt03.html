@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Part III. SGF Flavors</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="prev" href="libgsgf-Utility-Functions.html" title="Utility Functions">
+<link rel="next" href="general-properties.html" title="General SGF Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="libgsgf-Utility-Functions.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td> </td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="general-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="part">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="idm47168720138416"></a>Part III. SGF Flavors</h1></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt><span class="chapter"><a href="general-properties.html">General SGF Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="general-properties.html#move-properties">Move Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="general-properties.html#property-B">B (Black move)</a></span></dt>
+<dt><span class="sect2"><a href="general-properties.html#property-KO">KO (Illegal move)</a></span></dt>
+<dt><span class="sect2"><a href="general-properties.html#property-MN">MN (Move number)</a></span></dt>
+<dt><span class="sect2"><a href="general-properties.html#property-W">W (White move)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="setup-properties.html">Setup Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="setup-properties.html#property-AB">AB (Add black stone)</a></span></dt>
+<dt><span class="sect2"><a href="setup-properties.html#property-AE">AE (Add empty stone, or clear point)</a></span></dt>
+<dt><span class="sect2"><a href="setup-properties.html#property-AW">AW (Add white stone)</a></span></dt>
+<dt><span class="sect2"><a href="setup-properties.html#property-PL">PL (Player on turn)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="node-annotation-properties.html">Node Annotation Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-C">C (comment)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-DM">DM (even position)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-GB">GB (good for black)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-GW">GB (good for white)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-HO">HO (hotspot)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-N">N (name)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-UC">UC (unclear)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-V">V (value)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="move-annotation-properties.html">Move Annotation Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-BM">BM (bad move)</a></span></dt>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-DO">DO (doubtful move)</a></span></dt>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-IT">IT (interesting move)</a></span></dt>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-TE">TE (good move or "tesuji")</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="markup-properties.html">Markup Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="markup-properties.html#property-AR">AR (arrow)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-CR">CR (circle)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-DD">DD (dim point)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-LB">LB (text on point)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-LN">LN (line)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-MA">MA (mark point with an X)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-SL">SL (selected)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-SQ">MA (mark point with a square)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-TR">MA (mark point with a triangle)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="root-properties.html">Root Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="root-properties.html#property-AP">AP (Application)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-CA">CA (Charset)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-FF">FF (File Format)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-GM">GM (Game Type)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-ST">ST (Variation Style)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-SZ">SZ (Board size)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="game-info-properties.html">Game Info Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="game-info-properties.html#property-AN">AN (annotator)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-BR">BR (black rank)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-CP">CP (copyright)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-DT">DT (date)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-EV">EV (event)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-GC">GC (game context)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-GN">GN (game name)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-ON">ON (opening played)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-OT">OT (overtime rule)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-PB">PB (black player)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-PC">PC (place)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-PW">PW (white player)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-RE">RE (result)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-RO">RO (round)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-RU">RU (rules)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-SO">SO (source)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-TM">TM (time limits)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-US">US (user)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-WR">WR (white rank)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-WT">WR (white team)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="timing-properties.html">Timing Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="timing-properties.html#property-BL">BL (time left for black)</a></span></dt>
+<dt><span class="sect2"><a href="timing-properties.html#property-OB">OB</a></span></dt>
+<dt><span class="sect2"><a href="timing-properties.html#property-OW">OW</a></span></dt>
+<dt><span class="sect2"><a href="timing-properties.html#property-WL">WL (time left for white)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="misc-properties.html">Miscellaneous Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="misc-properties.html#property-FG">FG (figure)</a></span></dt>
+<dt><span class="sect2"><a href="misc-properties.html#property-PM">PM (print move numbers)</a></span></dt>
+<dt><span class="sect2"><a href="misc-properties.html#property-VW">VW (view part)</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="backgammon-properties.html">Backgammon Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="backgammon-properties.html#bg-game-info-properties">Game Info Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="backgammon-properties.html#bg-property-MI">MI (Match Information)</a></span></dt>
+<dt><span class="sect2"><a href="backgammon-properties.html#bg-property-GS">GS (General Statistics)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="bg-node-annotation-properties.html">Node Annotation Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-A">A (Analysis)</a></span></dt>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-DA">DA (Doubling Analysis)</a></span></dt>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-BC">BC (Bad Cube)</a></span></dt>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-DC">DC (Doubtful Cube)</a></span></dt>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-LU">LU (Luck)</a></span></dt>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-MR">MR (Marked As Rolled Out)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="bg-setup-properties.html">Setup Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="bg-setup-properties.html#bg-property-CO">CO (Cube Position)</a></span></dt>
+<dt><span class="sect2"><a href="bg-setup-properties.html#bg-property-CV">CV (Cube Value)</a></span></dt>
+<dt><span class="sect2"><a href="bg-setup-properties.html#bg-property-DI">DI (Dice)</a></span></dt>
+</dl></dd>
+</dl></dd>
+</dl>
+</div>
+<p>
+    Both 
+    <a class="link" href="GSGFNode.html#gsgf-node-get-property-value" title="gsgf_node_get_property_value ()">gsgf_node_get_property_value()</a>
+    and
+    <a class="link" href="GSGFProperty.html#gsgf-property-get-value" title="gsgf_property_get_value ()">gsgf_property_get_value()</a>
+    return a <a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue">GSGFCookedValue</a>, resp.
+    a <a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>.  This is
+    not very useful unless you know the exact subtype.  The following sections
+    give an overview about the exact types returned by these functions, depending
+    on the particular flavor of SGF you use.      
+  </p>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

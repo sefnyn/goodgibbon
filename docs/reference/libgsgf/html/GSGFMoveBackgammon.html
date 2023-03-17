@@ -1,0 +1,560 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFMoveBackgammon</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="backgammon-flavor.html" title="Backgammon Flavor">
+<link rel="prev" href="GSGFFlavorBackgammon.html" title="GSGFFlavorBackgammon">
+<link rel="next" href="GSGFPointBackgammon.html" title="GSGFPointBackgammon">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFFlavorBackgammon.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="backgammon-flavor.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFPointBackgammon.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFMoveBackgammon.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFMoveBackgammon.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFMoveBackgammon.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFMoveBackgammon"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFMoveBackgammon.top_of_page"></a>GSGFMoveBackgammon</span></h2>
+<p>GSGFMoveBackgammon — Definitions for a move in Backgammon</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFMoveBackgammon.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFMoveBackgammon.html#GSGFMoveBackgammon-struct" title="struct GSGFMoveBackgammon">GSGFMoveBackgammon</a>;
+struct              <a class="link" href="GSGFMoveBackgammon.html#GSGFMoveBackgammonClass" title="struct GSGFMoveBackgammonClass">GSGFMoveBackgammonClass</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-get-die" title="gsgf_move_backgammon_get_die ()">gsgf_move_backgammon_get_die</a>        (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-get-from" title="gsgf_move_backgammon_get_from ()">gsgf_move_backgammon_get_from</a>       (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>               <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-get-num-moves" title="gsgf_move_backgammon_get_num_moves ()">gsgf_move_backgammon_get_num_moves</a>  (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-get-to" title="gsgf_move_backgammon_get_to ()">gsgf_move_backgammon_get_to</a>         (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-accept" title="gsgf_move_backgammon_is_accept ()">gsgf_move_backgammon_is_accept</a>      (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-double" title="gsgf_move_backgammon_is_double ()">gsgf_move_backgammon_is_double</a>      (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-drop" title="gsgf_move_backgammon_is_drop ()">gsgf_move_backgammon_is_drop</a>        (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-regular" title="gsgf_move_backgammon_is_regular ()">gsgf_move_backgammon_is_regular</a>     (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-reject" title="gsgf_move_backgammon_is_reject ()">gsgf_move_backgammon_is_reject</a>      (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-resign" title="gsgf_move_backgammon_is_resign ()">gsgf_move_backgammon_is_resign</a>      (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-is-take" title="gsgf_move_backgammon_is_take ()">gsgf_move_backgammon_is_take</a>        (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);
+<a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="returnvalue">GSGFMoveBackgammon</span></a> * <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-new" title="gsgf_move_backgammon_new ()">gsgf_move_backgammon_new</a>           (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="returnvalue">GSGFMoveBackgammon</span></a> * <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-new-from-raw" title="gsgf_move_backgammon_new_from_raw ()">gsgf_move_backgammon_new_from_raw</a>  (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="returnvalue">GSGFMoveBackgammon</span></a> * <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-new-from-string" title="gsgf_move_backgammon_new_from_string ()">gsgf_move_backgammon_new_from_string</a>
+                                                        (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *str</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="returnvalue">GSGFMoveBackgammon</span></a> * <a class="link" href="GSGFMoveBackgammon.html#gsgf-move-backgammon-new-regular" title="gsgf_move_backgammon_new_regular ()">gsgf_move_backgammon_new_regular</a>   (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> die1</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> die2</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFMoveBackgammon.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>
+         +----<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue">GSGFCookedValue</a>
+               +----<a class="link" href="GSGFMove.html" title="GSGFMove">GSGFMove</a>
+                     +----GSGFMoveBackgammon
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFMoveBackgammon.description"></a><h2>Description</h2>
+<p>
+Representation of one single move in Backgammon
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFMoveBackgammon.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFMoveBackgammon-struct"></a><h3>struct GSGFMoveBackgammon</h3>
+<pre class="programlisting">struct GSGFMoveBackgammon;</pre>
+<p>
+Instance of <a class="link" href="GSGFMoveBackgammon.html#GSGFMoveBackgammonClass" title="struct GSGFMoveBackgammonClass"><span class="type">GSGFMoveBackgammonClass</span></a>.  All properties are private.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFMoveBackgammonClass"></a><h3>struct GSGFMoveBackgammonClass</h3>
+<pre class="programlisting">struct GSGFMoveBackgammonClass {
+};
+</pre>
+<p>
+Class implementing the backgammon move of SGF.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-get-die"></a><h3>gsgf_move_backgammon_get_die ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               gsgf_move_backgammon_get_die        (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);</pre>
+<p>
+Get the number shown on the first or second die.  That means that <em class="parameter"><code>i</code></em> must
+be either 0 or 1.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to query.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>i</code></em> :</span></p></td>
+<td>The dice number <em class="parameter"><code>i</code></em>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The number on die <em class="parameter"><code>i</code></em>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-get-from"></a><h3>gsgf_move_backgammon_get_from ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               gsgf_move_backgammon_get_from       (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);</pre>
+<p>
+Get the starting point of a move.
+</p>
+<p>
+TODO: Compress moves, i. e. turn 65: 24/18/13 into 65: 24/13.
+</p>
+<p>
+Points are counted with base 0, or 0 is the ace point for white (and the 24
+point for black), through to 23 which is the 24 point for white (and the ace
+point for black). 24 is the bar, and 25 is the bearoff tray.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to query.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>i</code></em> :</span></p></td>
+<td>The sub move <em class="parameter"><code>i</code></em>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The number associated to the starting point.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-get-num-moves"></a><h3>gsgf_move_backgammon_get_num_moves ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>               gsgf_move_backgammon_get_num_moves  (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);</pre>
+<p>
+Get the number of (sub) moves in a <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a>.  This value
+can range from 0 (cannot move for example because of the opponent's
+closed home board) to 4 (after a double).
+</p>
+<p>
+TODO: Rename to gsgf_move_backgammon_get_sub_move?
+TODO: Compress moves, i. e. turn 65: 24/18/13 into 65: 24/13.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to query.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The number of sub moves executed after a dice roll.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-get-to"></a><h3>gsgf_move_backgammon_get_to ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               gsgf_move_backgammon_get_to         (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);</pre>
+<p>
+Get the end point of a move.
+</p>
+<p>
+TODO: Compress moves, i. e. turn 65: 24/18/13 into 65: 24/13.
+</p>
+<p>
+Points are counted with base 0, or 0 is the ace point for white (and the 24
+point for black), through to 23 which is the 24 point for white (and the ace
+point for black). 24 is the bar, and 25 is the bearoff tray.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to query.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>i</code></em> :</span></p></td>
+<td>The sub move <em class="parameter"><code>i</code></em>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The number associated to the end point.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-is-accept"></a><h3>gsgf_move_backgammon_is_accept ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_move_backgammon_is_accept      (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);</pre>
+<p>
+Checks whether <em class="parameter"><code>self</code></em> is an accepted resignation in backgammon.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to check.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if <em class="parameter"><code>self</code></em> is an accepted resignation, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-is-double"></a><h3>gsgf_move_backgammon_is_double ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_move_backgammon_is_double      (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);</pre>
+<p>
+Checks whether <em class="parameter"><code>self</code></em> is a double in backgammon.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to check.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if <em class="parameter"><code>self</code></em> is a regular backgammon move, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-is-drop"></a><h3>gsgf_move_backgammon_is_drop ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_move_backgammon_is_drop        (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);</pre>
+<p>
+Checks whether <em class="parameter"><code>self</code></em> is a backgammon drop (the negative reply to
+a double.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to check.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if <em class="parameter"><code>self</code></em> is a backgammon drop, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-is-regular"></a><h3>gsgf_move_backgammon_is_regular ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_move_backgammon_is_regular     (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);</pre>
+<p>
+Checks whether <em class="parameter"><code>self</code></em> is a regular backgammon move.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to check.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if <em class="parameter"><code>self</code></em> is a regular backgammon move, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-is-reject"></a><h3>gsgf_move_backgammon_is_reject ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_move_backgammon_is_reject      (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);</pre>
+<p>
+Checks whether <em class="parameter"><code>self</code></em> is a rejected resignation in backgammon.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to check.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if <em class="parameter"><code>self</code></em> is a rejected resignation, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-is-resign"></a><h3>gsgf_move_backgammon_is_resign ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="returnvalue">guint</span></a>               gsgf_move_backgammon_is_resign      (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);</pre>
+<p>
+Checks whether <em class="parameter"><code>self</code></em> is a backgammon resignation offer.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to check.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The value of the resignation or 0 if <em class="parameter"><code>self</code></em> is not a resignation
+offer.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-is-take"></a><h3>gsgf_move_backgammon_is_take ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_move_backgammon_is_take        (<em class="parameter"><code>const <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> *self</code></em>);</pre>
+<p>
+Checks whether <em class="parameter"><code>self</code></em> is a backgammon take (the affirmative reply to
+a double
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> to check.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a> if <em class="parameter"><code>self</code></em> is a backgammon take, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><span class="type">FALSE</span></a> otherwise.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-new"></a><h3>gsgf_move_backgammon_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="returnvalue">GSGFMoveBackgammon</span></a> * gsgf_move_backgammon_new           (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-new-from-raw"></a><h3>gsgf_move_backgammon_new_from_raw ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="returnvalue">GSGFMoveBackgammon</span></a> * gsgf_move_backgammon_new_from_raw  (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> from a <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a>.  <em class="parameter"><code>raw</code></em> must be
+single-valued and contain a string matching the SGF backgammon move
+syntax (see <a class="ulink" href="http://www.red-bean.com/sgf/backgammon.html#moves" target="_top">
+online docs</a> for more details).  Additionally, libgsgf allows the
+following move specifications: "resign:N" where N is an integer greater than
+0 specifying the value of the offered resignation (1 for normal, 2 for
+gammon, 3 for backgammon), "reject" for rejection of an offered resignation,
+"accept" for an accepted resignation.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>raw</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> to parse.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occuring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-new-from-string"></a><h3>gsgf_move_backgammon_new_from_string ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="returnvalue">GSGFMoveBackgammon</span></a> * gsgf_move_backgammon_new_from_string
+                                                        (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *str</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a> from a string.  The contents of
+<em class="parameter"><code>string</code></em> must match the SGF backgammon string syntax (see
+<a class="ulink" href="http://www.red-bean.com/sgf/backgammon.html#moves" target="_top">
+online docs</a> for more details).  Additionally, libgsgf allows the
+following move specifications: "resign:N" where N is an integer greater than
+0 specifying the value of the offered resignation, "reject" for rejection of
+an offered resignation, "accept" for an accepted resignation.
+</p>
+<p>
+Applications should accept any positive value for a resignation.  The
+value of the cube is already taken into account.  If a player resigns with
+a gammon and the cube show 2, the "value" or the resignation should be
+4.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>str</code></em> :</span></p></td>
+<td>The string to parse.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occuring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-move-backgammon-new-regular"></a><h3>gsgf_move_backgammon_new_regular ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="returnvalue">GSGFMoveBackgammon</span></a> * gsgf_move_backgammon_new_regular   (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> die1</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#guint"><span class="type">guint</span></a> die2</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+<p>
+Creates a new regular <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>die1</code></em> :</span></p></td>
+<td>First die (1-6).</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>die2</code></em> :</span></p></td>
+<td>Second die (1-6).</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occuring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td>List of from-to pairs of points (0 - 25), terminated by -1.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon"><span class="type">GSGFMoveBackgammon</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.2.0</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

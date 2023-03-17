@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFText</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="sgf-primitives.html" title="SGF Primitives">
+<link rel="prev" href="GSGFReal.html" title="GSGFReal">
+<link rel="next" href="GSGFSimpleText.html" title="GSGFSimpleText">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFReal.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="sgf-primitives.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFSimpleText.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFText.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFText.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFText.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFText"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFText.top_of_page"></a>GSGFText</span></h2>
+<p>GSGFText — Strong primitive type for SGF text.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFText.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFText.html#GSGFText-struct" title="struct GSGFText">GSGFText</a>;
+struct              <a class="link" href="GSGFText.html#GSGFTextClass" title="struct GSGFTextClass">GSGFTextClass</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="GSGFText.html#gsgf-text-get-value" title="gsgf_text_get_value ()">gsgf_text_get_value</a>                 (<em class="parameter"><code>const <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a> *self</code></em>);
+<a class="link" href="GSGFText.html" title="GSGFText"><span class="returnvalue">GSGFText</span></a> *          <a class="link" href="GSGFText.html#gsgf-text-new" title="gsgf_text_new ()">gsgf_text_new</a>                       (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   <a class="link" href="GSGFText.html#gsgf-text-new-from-raw" title="gsgf_text_new_from_raw ()">gsgf_text_new_from_raw</a>              (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">struct _GSGFProperty</span> *property</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFText.html#gsgf-text-set-value" title="gsgf_text_set_value ()">gsgf_text_set_value</a>                 (<em class="parameter"><code><a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> copy</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFText.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>
+         +----<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue">GSGFCookedValue</a>
+               +----GSGFText
+                     +----<a class="link" href="GSGFSimpleText.html" title="GSGFSimpleText">GSGFSimpleText</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFText.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a> encapsulates an SGF text.  Its main purpose is
+to allow for type checking when retrieving or setting SGF properties.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFText.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFText-struct"></a><h3>struct GSGFText</h3>
+<pre class="programlisting">struct GSGFText;</pre>
+<p>
+One instance of a <a class="link" href="GSGFText.html#GSGFTextClass" title="struct GSGFTextClass"><span class="type">GSGFTextClass</span></a>.  All properties are private.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFTextClass"></a><h3>struct GSGFTextClass</h3>
+<pre class="programlisting">struct GSGFTextClass {
+};
+</pre>
+<p>
+Class representing a text of SGF.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-text-get-value"></a><h3>gsgf_text_get_value ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gsgf_text_get_value                 (<em class="parameter"><code>const <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a> *self</code></em>);</pre>
+<p>
+Retrieve the value stored in a <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value stored.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-text-new"></a><h3>gsgf_text_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFText.html" title="GSGFText"><span class="returnvalue">GSGFText</span></a> *          gsgf_text_new                       (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a> and stores a copy of <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>The value to store.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-text-new-from-raw"></a><h3>gsgf_text_new_from_raw ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   gsgf_text_new_from_raw              (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">struct _GSGFProperty</span> *property</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a> from a <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a>.  This constructor is only
+interesting for people that write their own <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>raw</code></em> :</span></p></td>
+<td>A <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> containing exactly one value that should be stored.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flavor</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> of the current <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> <em class="parameter"><code>raw</code></em> came from.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occuring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> in case of an error.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-text-set-value"></a><h3>gsgf_text_set_value ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_text_set_value                 (<em class="parameter"><code><a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> copy</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Stores a new value in a <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a>.  If <em class="parameter"><code>copy</code></em> is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, a copy is
+stored.  If it is <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> the <em class="parameter"><code>value</code></em> is stored directly.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFText.html" title="GSGFText"><span class="type">GSGFText</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>The new value to store.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>copy</code></em> :</span></p></td>
+<td>Flag that indicates whether to create a copy of the data.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>Optional location to store an error.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

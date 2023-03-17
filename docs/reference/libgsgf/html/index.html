@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LIBGSGF Reference Manual</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="next" href="pt01.html" title="Part I. LIBGSGF Overview">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<div lang="en" class="book">
+<div class="titlepage">
+<div>
+<div><table class="navigation" id="top" width="100%" cellpadding="2" cellspacing="0"><tr><th valign="middle"><p class="title">LIBGSGF Reference Manual</p></th></tr></table></div>
+<div><p class="releaseinfo">
+      for LIBGSF 0.2.0
+
+      The latest version of this documentation can be found on-line at
+      <a class="ulink" href="http://www.gibbon.bg/gibbon/docs/libgsgf/reference/" target="_top">http://www.gibbon.bg/gibbon/docs/libgsgf/reference/</a>.
+    </p></div>
+</div>
+<hr>
+</div>
+<div class="toc"><dl class="toc">
+<dt><span class="part"><a href="pt01.html">I. LIBGSGF Overview</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="ch01.html">Introduction</a></span></dt>
+<dt><span class="chapter"><a href="ch02.html">Basic Structure of SGF and SGF Flavors</a></span></dt>
+<dt><span class="chapter"><a href="ch03.html">SGF Limitations and Shortcomings</a></span></dt>
+</dl></dd>
+<dt><span class="part"><a href="api-reference.html">II. API Reference</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="components.html">Components</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GSGFComponent.html">GSGFComponent</a></span><span class="refpurpose"> — Component of an SGF document.
+Since: 0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFCollection.html">GSGFCollection</a></span><span class="refpurpose"> — A collection of games.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFGameTree.html">GSGFGameTree</a></span><span class="refpurpose"> — An SGF game tree.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFNode.html">GSGFNode</a></span><span class="refpurpose"> — An SGF node.
+Since:0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFProperty.html">GSGFProperty</a></span><span class="refpurpose"> — An SGF property.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="sgf-primitives.html">SGF Primitives</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GSGFValue.html">GSGFValue</a></span><span class="refpurpose">Abstract base class for the value of a <span class="type">GSGFProperty</span>!
+Since: 0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFRaw.html">GSGFRaw</a></span><span class="refpurpose"> — Raw, unqualified data in SGF files.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFCookedValue.html">GSGFCookedValue</a></span><span class="refpurpose"> — Abstract base class for qualified data stored in SGF
+files.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFNumber.html">GSGFNumber</a></span><span class="refpurpose"> — Strong primitive type for SGF numbers.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFReal.html">GSGFReal</a></span><span class="refpurpose"> — Strong primitive type for SGF floating point numbers.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFText.html">GSGFText</a></span><span class="refpurpose"> — Strong primitive type for SGF text.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFSimpleText.html">GSGFSimpleText</a></span><span class="refpurpose"> — Strong primitive type for SGF simple texts.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFCompose.html">GSGFCompose</a></span><span class="refpurpose"> — Composed data in SGF files.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFEmpty.html">GSGFEmpty</a></span><span class="refpurpose"> — Strong primitive type for SGF emptys.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFListOf.html">GSGFListOf</a></span><span class="refpurpose"> — ListOf data in SGF files.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="sgf-high-level-types.html">SGF High Level Types</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GSGFColor.html">GSGFColor</a></span><span class="refpurpose"> — Primitive type for an SGF color.
+Since: 0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFDouble.html">GSGFDouble</a></span><span class="refpurpose"> — An integer number that is either one or two.
+Since: 0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFResult.html">GSGFResult</a></span><span class="refpurpose"> — A result of a game in SGF!
+Since: 0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFDate.html">GSGFDate</a></span><span class="refpurpose"> — Representation of a date (or dates!) in SGF
+Since: 0.1.0</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="sgf-flavor-api.html">SGF Flavor API</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GSGFFlavor.html">GSGFFlavor</a></span><span class="refpurpose"> — General SGF properties.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFMove.html">GSGFMove</a></span><span class="refpurpose"> — Abstract base class for an SGF move.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFPoint.html">GSGFPoint</a></span><span class="refpurpose"> — Abstract base class for an SGF point.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFStone.html">GSGFStone</a></span><span class="refpurpose"> — Abstract base class for an SGF stone.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="backgammon-flavor.html">Backgammon Flavor</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GSGFFlavorBackgammon.html">GSGFFlavorBackgammon</a></span><span class="refpurpose"> — Definitions for the Backgammon flavor of SGF</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFMoveBackgammon.html">GSGFMoveBackgammon</a></span><span class="refpurpose"> — Definitions for a move in Backgammon</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFPointBackgammon.html">GSGFPointBackgammon</a></span><span class="refpurpose"> — Definitions for a point in Backgammon</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFStoneBackgammon.html">GSGFStoneBackgammon</a></span><span class="refpurpose"> — Definitions for a stone in Backgammon</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="miscellaneous.html">Miscellaneous</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libgsgf-GSGFError.html">GSGFError</a></span><span class="refpurpose"> — GSGF Errors</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libgsgf-Utility-Functions.html">Utility Functions</a></span><span class="refpurpose"> — Utility Functions</span>
+</dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="part"><a href="pt03.html">III. SGF Flavors</a></span></dt>
+<dd><dl>
+<dt><span class="chapter"><a href="general-properties.html">General SGF Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="general-properties.html#move-properties">Move Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="general-properties.html#property-B">B (Black move)</a></span></dt>
+<dt><span class="sect2"><a href="general-properties.html#property-KO">KO (Illegal move)</a></span></dt>
+<dt><span class="sect2"><a href="general-properties.html#property-MN">MN (Move number)</a></span></dt>
+<dt><span class="sect2"><a href="general-properties.html#property-W">W (White move)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="setup-properties.html">Setup Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="setup-properties.html#property-AB">AB (Add black stone)</a></span></dt>
+<dt><span class="sect2"><a href="setup-properties.html#property-AE">AE (Add empty stone, or clear point)</a></span></dt>
+<dt><span class="sect2"><a href="setup-properties.html#property-AW">AW (Add white stone)</a></span></dt>
+<dt><span class="sect2"><a href="setup-properties.html#property-PL">PL (Player on turn)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="node-annotation-properties.html">Node Annotation Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-C">C (comment)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-DM">DM (even position)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-GB">GB (good for black)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-GW">GB (good for white)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-HO">HO (hotspot)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-N">N (name)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-UC">UC (unclear)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-V">V (value)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="move-annotation-properties.html">Move Annotation Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-BM">BM (bad move)</a></span></dt>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-DO">DO (doubtful move)</a></span></dt>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-IT">IT (interesting move)</a></span></dt>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-TE">TE (good move or "tesuji")</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="markup-properties.html">Markup Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="markup-properties.html#property-AR">AR (arrow)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-CR">CR (circle)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-DD">DD (dim point)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-LB">LB (text on point)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-LN">LN (line)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-MA">MA (mark point with an X)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-SL">SL (selected)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-SQ">MA (mark point with a square)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-TR">MA (mark point with a triangle)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="root-properties.html">Root Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="root-properties.html#property-AP">AP (Application)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-CA">CA (Charset)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-FF">FF (File Format)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-GM">GM (Game Type)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-ST">ST (Variation Style)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-SZ">SZ (Board size)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="game-info-properties.html">Game Info Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="game-info-properties.html#property-AN">AN (annotator)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-BR">BR (black rank)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-CP">CP (copyright)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-DT">DT (date)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-EV">EV (event)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-GC">GC (game context)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-GN">GN (game name)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-ON">ON (opening played)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-OT">OT (overtime rule)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-PB">PB (black player)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-PC">PC (place)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-PW">PW (white player)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-RE">RE (result)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-RO">RO (round)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-RU">RU (rules)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-SO">SO (source)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-TM">TM (time limits)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-US">US (user)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-WR">WR (white rank)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-WT">WR (white team)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="timing-properties.html">Timing Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="timing-properties.html#property-BL">BL (time left for black)</a></span></dt>
+<dt><span class="sect2"><a href="timing-properties.html#property-OB">OB</a></span></dt>
+<dt><span class="sect2"><a href="timing-properties.html#property-OW">OW</a></span></dt>
+<dt><span class="sect2"><a href="timing-properties.html#property-WL">WL (time left for white)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="misc-properties.html">Miscellaneous Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="misc-properties.html#property-FG">FG (figure)</a></span></dt>
+<dt><span class="sect2"><a href="misc-properties.html#property-PM">PM (print move numbers)</a></span></dt>
+<dt><span class="sect2"><a href="misc-properties.html#property-VW">VW (view part)</a></span></dt>
+</dl></dd>
+</dl></dd>
+<dt><span class="chapter"><a href="backgammon-properties.html">Backgammon Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect1"><a href="backgammon-properties.html#bg-game-info-properties">Game Info Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="backgammon-properties.html#bg-property-MI">MI (Match Information)</a></span></dt>
+<dt><span class="sect2"><a href="backgammon-properties.html#bg-property-GS">GS (General Statistics)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="bg-node-annotation-properties.html">Node Annotation Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-A">A (Analysis)</a></span></dt>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-DA">DA (Doubling Analysis)</a></span></dt>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-BC">BC (Bad Cube)</a></span></dt>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-DC">DC (Doubtful Cube)</a></span></dt>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-LU">LU (Luck)</a></span></dt>
+<dt><span class="sect2"><a href="bg-node-annotation-properties.html#bg-property-MR">MR (Marked As Rolled Out)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="bg-setup-properties.html">Setup Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="bg-setup-properties.html#bg-property-CO">CO (Cube Position)</a></span></dt>
+<dt><span class="sect2"><a href="bg-setup-properties.html#bg-property-CV">CV (Cube Value)</a></span></dt>
+<dt><span class="sect2"><a href="bg-setup-properties.html#bg-property-DI">DI (Dice)</a></span></dt>
+</dl></dd>
+</dl></dd>
+</dl></dd>
+<dt><span class="index"><a href="api-index-full.html">API Index</a></span></dt>
+<dt><span class="index"><a href="deprecated-api-index.html">Index of deprecated API</a></span></dt>
+<dt><span class="glossary"><a href="annotation-glossary.html">Annotation Glossary</a></span></dt>
+</dl></div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

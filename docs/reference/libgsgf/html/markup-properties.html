@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Markup Properties</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="general-properties.html" title="General SGF Properties">
+<link rel="prev" href="move-annotation-properties.html" title="Move Annotation Properties">
+<link rel="next" href="root-properties.html" title="Root Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="move-annotation-properties.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="general-properties.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="root-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="markup-properties"></a>Markup Properties</h2></div></div></div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-AR"></a>AR (arrow)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFListOf.html" title="GSGFListOf">GSGFListOf</a>,
+        item type: GSGFComposed
+        (<a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>:<a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>)
+      </p>
+<p>
+        A list of point pairs.  Each pair specifies an arrow to draw.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#AR" target="_top">http://www.red-bean.com/sgf/properties.html#AR</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-CR"></a>CR (circle)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFListOf.html" title="GSGFListOf">GSGFListOf</a>,
+        item type: <a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>.
+      </p>
+<p>
+        Mark points with a circle.  The properties CR, MA, SL, SQ, and TR must not
+        be used to mark the same point within one node.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#CR" target="_top">http://www.red-bean.com/sgf/properties.html#CR</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-DD"></a>DD (dim point)</h3></div></div></div>
+<p>
+        Type: Possibly empty <a class="link" href="GSGFListOf.html" title="GSGFListOf">GSGFListOf</a>,
+        item type: <a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>.
+      </p>
+<p>
+        Dim out points.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#DD" target="_top">http://www.red-bean.com/sgf/properties.html#DD</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-LB"></a>LB (text on point)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFListOf.html" title="GSGFListOf">GSGFListOf</a>,
+        item type: GSGFComposed
+        (<a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>:<a class="link" href="GSGFSimpleText.html" title="GSGFSimpleText">GSGFSimpleText</a>)
+      </p>
+<p>
+        A list of pairs of points combined with a text label.  Points must be unique.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#LB" target="_top">http://www.red-bean.com/sgf/properties.html#LB</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-LN"></a>LN (line)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFListOf.html" title="GSGFListOf">GSGFListOf</a>,
+        item type: GSGFComposed
+        (<a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>:<a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>)
+      </p>
+<p>
+        A list of point pairs.  Each pair specifies a line to draw between points.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#LN" target="_top">http://www.red-bean.com/sgf/properties.html#LN</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-MA"></a>MA (mark point with an X)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFListOf.html" title="GSGFListOf">GSGFListOf</a>,
+        item type: <a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>.
+      </p>
+<p>
+        Mark points with an X.  The properties CR, MA, SL, SQ, and TR must not
+        be used to mark the same point within one node.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#MA" target="_top">http://www.red-bean.com/sgf/properties.html#MA</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-SL"></a>SL (selected)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFListOf.html" title="GSGFListOf">GSGFListOf</a>,
+        item type: <a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>.
+      </p>
+<p>
+        Mark points as selected.  The properties CR, MA, SL, SQ, and TR must not
+        be used to mark the same point within one node.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#SL" target="_top">http://www.red-bean.com/sgf/properties.html#SL</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-SQ"></a>MA (mark point with a square)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFListOf.html" title="GSGFListOf">GSGFListOf</a>,
+        item type: <a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>.
+      </p>
+<p>
+        Mark points with a square.  The properties CR, MA, SL, SQ, and TR must not
+        be used to mark the same point within one node.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#SQ" target="_top">http://www.red-bean.com/sgf/properties.html#SQ</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-TR"></a>MA (mark point with a triangle)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFListOf.html" title="GSGFListOf">GSGFListOf</a>,
+        item type: <a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>.
+      </p>
+<p>
+        Mark points with a triangle.  The properties CR, MA, SL, SQ, and TR must not
+        be used to mark the same point within one node.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#TR" target="_top">http://www.red-bean.com/sgf/properties.html#TR</a>.
+      </p>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

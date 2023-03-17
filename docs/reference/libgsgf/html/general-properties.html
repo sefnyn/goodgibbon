@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>General SGF Properties</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="pt03.html" title="Part III. SGF Flavors">
+<link rel="prev" href="pt03.html" title="Part III. SGF Flavors">
+<link rel="next" href="setup-properties.html" title="Setup Properties">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="pt03.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="pt03.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="setup-properties.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="chapter">
+<div class="titlepage"><div><div><h2 class="title">
+<a name="general-properties"></a>General SGF Properties</h2></div></div></div>
+<div class="toc"><dl class="toc">
+<dt><span class="sect1"><a href="general-properties.html#move-properties">Move Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="general-properties.html#property-B">B (Black move)</a></span></dt>
+<dt><span class="sect2"><a href="general-properties.html#property-KO">KO (Illegal move)</a></span></dt>
+<dt><span class="sect2"><a href="general-properties.html#property-MN">MN (Move number)</a></span></dt>
+<dt><span class="sect2"><a href="general-properties.html#property-W">W (White move)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="setup-properties.html">Setup Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="setup-properties.html#property-AB">AB (Add black stone)</a></span></dt>
+<dt><span class="sect2"><a href="setup-properties.html#property-AE">AE (Add empty stone, or clear point)</a></span></dt>
+<dt><span class="sect2"><a href="setup-properties.html#property-AW">AW (Add white stone)</a></span></dt>
+<dt><span class="sect2"><a href="setup-properties.html#property-PL">PL (Player on turn)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="node-annotation-properties.html">Node Annotation Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-C">C (comment)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-DM">DM (even position)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-GB">GB (good for black)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-GW">GB (good for white)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-HO">HO (hotspot)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-N">N (name)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-UC">UC (unclear)</a></span></dt>
+<dt><span class="sect2"><a href="node-annotation-properties.html#property-V">V (value)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="move-annotation-properties.html">Move Annotation Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-BM">BM (bad move)</a></span></dt>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-DO">DO (doubtful move)</a></span></dt>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-IT">IT (interesting move)</a></span></dt>
+<dt><span class="sect2"><a href="move-annotation-properties.html#property-TE">TE (good move or "tesuji")</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="markup-properties.html">Markup Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="markup-properties.html#property-AR">AR (arrow)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-CR">CR (circle)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-DD">DD (dim point)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-LB">LB (text on point)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-LN">LN (line)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-MA">MA (mark point with an X)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-SL">SL (selected)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-SQ">MA (mark point with a square)</a></span></dt>
+<dt><span class="sect2"><a href="markup-properties.html#property-TR">MA (mark point with a triangle)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="root-properties.html">Root Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="root-properties.html#property-AP">AP (Application)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-CA">CA (Charset)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-FF">FF (File Format)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-GM">GM (Game Type)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-ST">ST (Variation Style)</a></span></dt>
+<dt><span class="sect2"><a href="root-properties.html#property-SZ">SZ (Board size)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="game-info-properties.html">Game Info Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="game-info-properties.html#property-AN">AN (annotator)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-BR">BR (black rank)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-CP">CP (copyright)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-DT">DT (date)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-EV">EV (event)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-GC">GC (game context)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-GN">GN (game name)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-ON">ON (opening played)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-OT">OT (overtime rule)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-PB">PB (black player)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-PC">PC (place)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-PW">PW (white player)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-RE">RE (result)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-RO">RO (round)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-RU">RU (rules)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-SO">SO (source)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-TM">TM (time limits)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-US">US (user)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-WR">WR (white rank)</a></span></dt>
+<dt><span class="sect2"><a href="game-info-properties.html#property-WT">WR (white team)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="timing-properties.html">Timing Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="timing-properties.html#property-BL">BL (time left for black)</a></span></dt>
+<dt><span class="sect2"><a href="timing-properties.html#property-OB">OB</a></span></dt>
+<dt><span class="sect2"><a href="timing-properties.html#property-OW">OW</a></span></dt>
+<dt><span class="sect2"><a href="timing-properties.html#property-WL">WL (time left for white)</a></span></dt>
+</dl></dd>
+<dt><span class="sect1"><a href="misc-properties.html">Miscellaneous Properties</a></span></dt>
+<dd><dl>
+<dt><span class="sect2"><a href="misc-properties.html#property-FG">FG (figure)</a></span></dt>
+<dt><span class="sect2"><a href="misc-properties.html#property-PM">PM (print move numbers)</a></span></dt>
+<dt><span class="sect2"><a href="misc-properties.html#property-VW">VW (view part)</a></span></dt>
+</dl></dd>
+</dl></div>
+<p>
+    The following properties can be used in all flavors of SGF.  You should
+    note that some of them are bound to abstract classes in libgsgf.  When
+    parsing SGF data, the values are cooked into the corresponding derived
+    classes of the particular <a class="link" href="GSGFFlavor.html" title="GSGFFlavor">GSGFFlavor</a>
+    in use.
+  </p>
+<p>
+    For example, for backgammon, whenever a 
+    <a class="link" href="GSGFMove.html" title="GSGFMove">GSGFMove</a> is specified as the type,
+    you will really get a 
+    <a class="link" href="GSGFMoveBackgammon.html" title="GSGFMoveBackgammon">GSGFMoveBackgammon</a>.
+    The same applies to <a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>
+    (cast to <a class="link" href="GSGFPointBackgammon.html" title="GSGFPointBackgammon">GSGFPointBackgammon</a>,
+    and
+    to <a class="link" href="GSGFStone.html" title="GSGFStone">GSGFStone</a>
+    (cast to <a class="link" href="GSGFStoneBackgammon.html" title="GSGFStoneBackgammon">GSGFStoneBackgammon</a>,
+  </p>
+<div class="sect1">
+<div class="titlepage"><div><div><h2 class="title" style="clear: both">
+<a name="move-properties"></a>Move Properties</h2></div></div></div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-B"></a>B (Black move)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFMove.html" title="GSGFMove">GSGFMove</a>:
+      </p>
+<p>
+        A move for player Black.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#B" target="_top">http://www.red-bean.com/sgf/properties.html#B</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-KO"></a>KO (Illegal move)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFEmpty.html" title="GSGFEmpty">GSGFEmpty</a>:
+      </p>
+<p>
+        Mark a move node as illegal.  This property is a no-op for
+        applications based on libgsgf.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#KO" target="_top">http://www.red-bean.com/sgf/properties.html#KO</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-MN"></a>MN (Move number)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFNumber.html" title="GSGFNumber">GSGFNumber</a>:
+      </p>
+<p>
+        Set move number.  This property is only interesting for
+        incomplete games.  Otherwise you should just rely on
+        chronological move numbers.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#MN" target="_top">http://www.red-bean.com/sgf/properties.html#MN</a>.
+      </p>
+</div>
+<div class="sect2">
+<div class="titlepage"><div><div><h3 class="title">
+<a name="property-W"></a>W (White move)</h3></div></div></div>
+<p>
+        Type: <a class="link" href="GSGFMove.html" title="GSGFMove">GSGFMove</a>:
+      </p>
+<p>
+        A move for player White.
+      </p>
+<p>
+        See <a class="ulink" href="http://www.red-bean.com/sgf/properties.html#W" target="_top">http://www.red-bean.com/sgf/properties.html#W</a>.
+      </p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

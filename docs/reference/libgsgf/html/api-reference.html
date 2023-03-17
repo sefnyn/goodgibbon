@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Part II. API Reference</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="prev" href="ch03.html" title="SGF Limitations and Shortcomings">
+<link rel="next" href="components.html" title="Components">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2"><tr valign="middle">
+<td><a accesskey="p" href="ch03.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td> </td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="components.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr></table>
+<div class="part">
+<div class="titlepage"><div><div><h1 class="title">
+<a name="api-reference"></a>Part II. API Reference</h1></div></div></div>
+<div class="toc">
+<p><b>Table of Contents</b></p>
+<dl class="toc">
+<dt><span class="chapter"><a href="components.html">Components</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GSGFComponent.html">GSGFComponent</a></span><span class="refpurpose"> — Component of an SGF document.
+Since: 0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFCollection.html">GSGFCollection</a></span><span class="refpurpose"> — A collection of games.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFGameTree.html">GSGFGameTree</a></span><span class="refpurpose"> — An SGF game tree.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFNode.html">GSGFNode</a></span><span class="refpurpose"> — An SGF node.
+Since:0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFProperty.html">GSGFProperty</a></span><span class="refpurpose"> — An SGF property.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="sgf-primitives.html">SGF Primitives</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GSGFValue.html">GSGFValue</a></span><span class="refpurpose">Abstract base class for the value of a <span class="type">GSGFProperty</span>!
+Since: 0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFRaw.html">GSGFRaw</a></span><span class="refpurpose"> — Raw, unqualified data in SGF files.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFCookedValue.html">GSGFCookedValue</a></span><span class="refpurpose"> — Abstract base class for qualified data stored in SGF
+files.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFNumber.html">GSGFNumber</a></span><span class="refpurpose"> — Strong primitive type for SGF numbers.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFReal.html">GSGFReal</a></span><span class="refpurpose"> — Strong primitive type for SGF floating point numbers.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFText.html">GSGFText</a></span><span class="refpurpose"> — Strong primitive type for SGF text.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFSimpleText.html">GSGFSimpleText</a></span><span class="refpurpose"> — Strong primitive type for SGF simple texts.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFCompose.html">GSGFCompose</a></span><span class="refpurpose"> — Composed data in SGF files.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFEmpty.html">GSGFEmpty</a></span><span class="refpurpose"> — Strong primitive type for SGF emptys.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFListOf.html">GSGFListOf</a></span><span class="refpurpose"> — ListOf data in SGF files.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="sgf-high-level-types.html">SGF High Level Types</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GSGFColor.html">GSGFColor</a></span><span class="refpurpose"> — Primitive type for an SGF color.
+Since: 0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFDouble.html">GSGFDouble</a></span><span class="refpurpose"> — An integer number that is either one or two.
+Since: 0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFResult.html">GSGFResult</a></span><span class="refpurpose"> — A result of a game in SGF!
+Since: 0.1.0</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFDate.html">GSGFDate</a></span><span class="refpurpose"> — Representation of a date (or dates!) in SGF
+Since: 0.1.0</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="sgf-flavor-api.html">SGF Flavor API</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GSGFFlavor.html">GSGFFlavor</a></span><span class="refpurpose"> — General SGF properties.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFMove.html">GSGFMove</a></span><span class="refpurpose"> — Abstract base class for an SGF move.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFPoint.html">GSGFPoint</a></span><span class="refpurpose"> — Abstract base class for an SGF point.</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFStone.html">GSGFStone</a></span><span class="refpurpose"> — Abstract base class for an SGF stone.</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="backgammon-flavor.html">Backgammon Flavor</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="GSGFFlavorBackgammon.html">GSGFFlavorBackgammon</a></span><span class="refpurpose"> — Definitions for the Backgammon flavor of SGF</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFMoveBackgammon.html">GSGFMoveBackgammon</a></span><span class="refpurpose"> — Definitions for a move in Backgammon</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFPointBackgammon.html">GSGFPointBackgammon</a></span><span class="refpurpose"> — Definitions for a point in Backgammon</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="GSGFStoneBackgammon.html">GSGFStoneBackgammon</a></span><span class="refpurpose"> — Definitions for a stone in Backgammon</span>
+</dt>
+</dl></dd>
+<dt><span class="chapter"><a href="miscellaneous.html">Miscellaneous</a></span></dt>
+<dd><dl>
+<dt>
+<span class="refentrytitle"><a href="libgsgf-GSGFError.html">GSGFError</a></span><span class="refpurpose"> — GSGF Errors</span>
+</dt>
+<dt>
+<span class="refentrytitle"><a href="libgsgf-Utility-Functions.html">Utility Functions</a></span><span class="refpurpose"> — Utility Functions</span>
+</dt>
+</dl></dd>
+</dl>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

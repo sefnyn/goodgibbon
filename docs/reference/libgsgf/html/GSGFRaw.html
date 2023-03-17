@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFRaw</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="sgf-primitives.html" title="SGF Primitives">
+<link rel="prev" href="GSGFValue.html" title="GSGFValue">
+<link rel="next" href="GSGFCookedValue.html" title="GSGFCookedValue">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFValue.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="sgf-primitives.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFCookedValue.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFRaw.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFRaw.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFRaw.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFRaw"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFRaw.top_of_page"></a>GSGFRaw</span></h2>
+<p>GSGFRaw — Raw, unqualified data in SGF files.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFRaw.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFRaw.html#GSGFRaw-struct" title="struct GSGFRaw">GSGFRaw</a>;
+struct              <a class="link" href="GSGFRaw.html#GSGFRawClass" title="struct GSGFRawClass">GSGFRawClass</a>;
+<span class="returnvalue">void</span>                <a class="link" href="GSGFRaw.html#gsgf-raw-add-value" title="gsgf_raw_add_value ()">gsgf_raw_add_value</a>                  (<em class="parameter"><code><a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>               <a class="link" href="GSGFRaw.html#gsgf-raw-get-number-of-values" title="gsgf_raw_get_number_of_values ()">gsgf_raw_get_number_of_values</a>       (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="GSGFRaw.html#gsgf-raw-get-value" title="gsgf_raw_get_value ()">gsgf_raw_get_value</a>                  (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);
+<a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="returnvalue">GSGFRaw</span></a> *           <a class="link" href="GSGFRaw.html#gsgf-raw-new" title="gsgf_raw_new ()">gsgf_raw_new</a>                        (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFRaw.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>
+         +----GSGFRaw
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFRaw.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> is the only <a class="link" href="GSGFValue.html" title="GSGFValue"><span class="type">GSGFValue</span></a> that is not a cooked value;
+the name sort of suggests that.  If the <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> that this <a class="link" href="GSGFValue.html" title="GSGFValue"><span class="type">GSGFValue</span></a>
+is known to the current <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> you can cook it into a <a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a>
+with the <code class="function">cook()</code> method of that <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>, although it is almost always
+correct to just cook the top-level <a class="link" href="GSGFComponent.html" title="GSGFComponent"><span class="type">GSGFComponent</span></a>, the <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a>
+instead.  This will cook all lower level components.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFRaw.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFRaw-struct"></a><h3>struct GSGFRaw</h3>
+<pre class="programlisting">struct GSGFRaw;</pre>
+<p>
+One instance of a <a class="link" href="GSGFRaw.html#GSGFRawClass" title="struct GSGFRawClass"><span class="type">GSGFRawClass</span></a>.  All properties are private.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFRawClass"></a><h3>struct GSGFRawClass</h3>
+<pre class="programlisting">struct GSGFRawClass {
+};
+</pre>
+<p>
+Class representing a raw of SGF.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-raw-add-value"></a><h3>gsgf_raw_add_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gsgf_raw_add_value                  (<em class="parameter"><code><a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>
+Add another string to the <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> object.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>The value to add.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-raw-get-number-of-values"></a><h3>gsgf_raw_get_number_of_values ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>               gsgf_raw_get_number_of_values       (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *self</code></em>);</pre>
+<p>
+Get the length of the property list.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> object.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The number of values stored.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-raw-get-value"></a><h3>gsgf_raw_get_value ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gsgf_raw_get_value                  (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);</pre>
+<p>
+Retrieve a certain raw value.  This function is onl interesting for people
+implementing their own <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> object.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>i</code></em> :</span></p></td>
+<td>Position in the property list.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The value stored at position <em class="parameter"><code>i</code></em> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-raw-new"></a><h3>gsgf_raw_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="returnvalue">GSGFRaw</span></a> *           gsgf_raw_new                        (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *value</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> and stores a copy of <em class="parameter"><code>value</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>The value to store.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

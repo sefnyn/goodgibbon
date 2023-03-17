@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFValue</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="sgf-primitives.html" title="SGF Primitives">
+<link rel="prev" href="sgf-primitives.html" title="SGF Primitives">
+<link rel="next" href="GSGFRaw.html" title="GSGFRaw">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="sgf-primitives.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="sgf-primitives.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFRaw.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFValue.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFValue.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFValue.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFValue"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFValue.top_of_page"></a>GSGFValue</span></h2>
+<p>GSGFValue — Abstract base class for the value of a <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>!
+Since: 0.1.0</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFValue.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFValue.html#GSGFValue-struct" title="struct GSGFValue">GSGFValue</a>;
+struct              <a class="link" href="GSGFValue.html#GSGFValueClass" title="struct GSGFValueClass">GSGFValueClass</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFValue.html#gsgf-value-write-stream" title="gsgf_value_write_stream ()">gsgf_value_write_stream</a>             (<em class="parameter"><code>const <a class="link" href="GSGFValue.html" title="GSGFValue"><span class="type">GSGFValue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GOutputStream.html"><span class="type">GOutputStream</span></a> *out</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *bytes_written</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFValue.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GSGFValue
+         +----<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue">GSGFCookedValue</a>
+         +----<a class="link" href="GSGFRaw.html" title="GSGFRaw">GSGFRaw</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFValue.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFValue.html" title="GSGFValue"><span class="type">GSGFValue</span></a> encapsulates the value of a property in SGF data.  It is the
+common, abstract base class of raw, unqualified data stored in a <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a>,
+or a <a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a> which is the result of successfully cooking such
+raw, unqualified data.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFValue.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFValue-struct"></a><h3>struct GSGFValue</h3>
+<pre class="programlisting">struct GSGFValue;</pre>
+<p>
+Encapsulation for any value, raw or cooked.  All properties are private.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFValueClass"></a><h3>struct GSGFValueClass</h3>
+<pre class="programlisting">struct GSGFValueClass {
+};
+</pre>
+<p>
+Class definition for any SGF value.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-value-write-stream"></a><h3>gsgf_value_write_stream ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_value_write_stream             (<em class="parameter"><code>const <a class="link" href="GSGFValue.html" title="GSGFValue"><span class="type">GSGFValue</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GOutputStream.html"><span class="type">GOutputStream</span></a> *out</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> *bytes_written</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Serialize a <a class="link" href="GSGFValue.html" title="GSGFValue"><span class="type">GSGFValue</span></a> into a <a href="http://library.gnome.org/devel/gio/unstable/GOutputStream.html"><span class="type">GOutputStream</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFValue.html" title="GSGFValue"><span class="type">GSGFValue</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>out</code></em> :</span></p></td>
+<td>The <a href="http://library.gnome.org/devel/gio/unstable/GOutputStream.html"><span class="type">GOutputStream</span></a> to write to.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>bytes_written</code></em> :</span></p></td>
+<td>Location to store the number of bytes written or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>Optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>Optional <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for success, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> for failure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

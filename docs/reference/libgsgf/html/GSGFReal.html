@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFReal</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="sgf-primitives.html" title="SGF Primitives">
+<link rel="prev" href="GSGFNumber.html" title="GSGFNumber">
+<link rel="next" href="GSGFText.html" title="GSGFText">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFNumber.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="sgf-primitives.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFText.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFReal.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFReal.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFReal.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFReal"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFReal.top_of_page"></a>GSGFReal</span></h2>
+<p>GSGFReal — Strong primitive type for SGF floating point numbers.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFReal.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFReal.html#GSGFReal-struct" title="struct GSGFReal">GSGFReal</a>;
+struct              <a class="link" href="GSGFReal.html#GSGFRealClass" title="struct GSGFRealClass">GSGFRealClass</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="GSGFReal.html#gsgf-real-get-value" title="gsgf_real_get_value ()">gsgf_real_get_value</a>                 (<em class="parameter"><code>const <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a> *self</code></em>);
+<a class="link" href="GSGFReal.html" title="GSGFReal"><span class="returnvalue">GSGFReal</span></a> *          <a class="link" href="GSGFReal.html#gsgf-real-new" title="gsgf_real_new ()">gsgf_real_new</a>                       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);
+<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   <a class="link" href="GSGFReal.html#gsgf-real-new-from-raw" title="gsgf_real_new_from_raw ()">gsgf_real_new_from_raw</a>              (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">struct _GSGFProperty</span> *property</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="GSGFReal.html#gsgf-real-set-value" title="gsgf_real_set_value ()">gsgf_real_set_value</a>                 (<em class="parameter"><code><a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="GSGFReal.html#gsgf-real-to-string" title="gsgf_real_to_string ()">gsgf_real_to_string</a>                 (<em class="parameter"><code>const <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFReal.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>
+         +----<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue">GSGFCookedValue</a>
+               +----GSGFReal
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFReal.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a> encapsulates an SGF integer.  Its main purpose is to allow
+for type checking when retrieving or setting SGF properties.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFReal.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFReal-struct"></a><h3>struct GSGFReal</h3>
+<pre class="programlisting">struct GSGFReal;</pre>
+<p>
+One instance of a <a class="link" href="GSGFReal.html#GSGFRealClass" title="struct GSGFRealClass"><span class="type">GSGFRealClass</span></a>.  All properties are private.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFRealClass"></a><h3>struct GSGFRealClass</h3>
+<pre class="programlisting">struct GSGFRealClass {
+};
+</pre>
+<p>
+Class representing a real in SGF.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-real-get-value"></a><h3>gsgf_real_get_value ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             gsgf_real_get_value                 (<em class="parameter"><code>const <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a> *self</code></em>);</pre>
+<p>
+Retrieve the value stored in a <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the value stored.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-real-new"></a><h3>gsgf_real_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFReal.html" title="GSGFReal"><span class="returnvalue">GSGFReal</span></a> *          gsgf_real_new                       (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>The value to store as a string or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-real-new-from-raw"></a><h3>gsgf_real_new_from_raw ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   gsgf_real_new_from_raw              (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">struct _GSGFProperty</span> *property</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a> from a <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a>.  This constructor is only
+interesting for people that write their own <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>raw</code></em> :</span></p></td>
+<td>A <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> containing exactly one value that should be stored.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flavor</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> of the current <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> <em class="parameter"><code>raw</code></em> came from.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occuring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> in case of an error.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-real-set-value"></a><h3>gsgf_real_set_value ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gsgf_real_set_value                 (<em class="parameter"><code><a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> value</code></em>);</pre>
+<p>
+Stores a new value in a <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>The new value to store.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-real-to-string"></a><h3>gsgf_real_to_string ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gsgf_real_to_string                 (<em class="parameter"><code>const <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a> *self</code></em>);</pre>
+<p>
+Converts a <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a> into a textual representation.  This representation
+meets the specification of the SGF real data type.
+</p>
+<p>
+In SGF, a real number is at least one decimal digit, optionally followed
+by a decimal point and at least one decimal digit for the fractional
+part.  There are no locale-specific group separators, no exponentional
+notation, and the decimal point is always a period.
+</p>
+<p>
+Its main difference to <a href="http://library.gnome.org/devel/glib/unstable/glib-String-Utility-Functions.html#g-ascii-dtostr"><code class="function">g_ascii_dtostr()</code></a> is that it does not use a fixed
+size buffer.
+</p>
+<p>
+Positive or negative infinity values are handled gracefully and converted
+to the maximum resp. minimum possible values.
+</p>
+<p>
+If the <em class="parameter"><code>self</code></em> stores NaN, or ir <em class="parameter"><code>self</code></em> is not a <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a>,
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> is returned.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFReal.html" title="GSGFReal"><span class="type">GSGFReal</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The string (which has to be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>) or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

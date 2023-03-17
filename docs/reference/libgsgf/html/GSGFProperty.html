@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFProperty</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="components.html" title="Components">
+<link rel="prev" href="GSGFNode.html" title="GSGFNode">
+<link rel="next" href="sgf-primitives.html" title="SGF Primitives">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFNode.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="components.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="sgf-primitives.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFProperty.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFProperty.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFProperty.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GSGFProperty.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFProperty"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFProperty.top_of_page"></a>GSGFProperty</span></h2>
+<p>GSGFProperty — An SGF property.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFProperty.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFProperty.html#GSGFProperty-struct" title="struct GSGFProperty">GSGFProperty</a>;
+struct              <a class="link" href="GSGFProperty.html#GSGFPropertyClass" title="struct GSGFPropertyClass">GSGFPropertyClass</a>;
+const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       <a class="link" href="GSGFProperty.html#gsgf-property-get-id" title="gsgf_property_get_id ()">gsgf_property_get_id</a>                (<em class="parameter"><code>const <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> *self</code></em>);
+<a class="link" href="GSGFNode.html" title="GSGFNode"><span class="returnvalue">GSGFNode</span></a> *          <a class="link" href="GSGFProperty.html#gsgf-property-get-node" title="gsgf_property_get_node ()">gsgf_property_get_node</a>              (<em class="parameter"><code>const <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> *self</code></em>);
+<a class="link" href="GSGFValue.html" title="GSGFValue"><span class="returnvalue">GSGFValue</span></a> *         <a class="link" href="GSGFProperty.html#gsgf-property-get-value" title="gsgf_property_get_value ()">gsgf_property_get_value</a>             (<em class="parameter"><code>const <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFProperty.html#gsgf-property-set-value" title="gsgf_property_set_value ()">gsgf_property_set_value</a>             (<em class="parameter"><code><a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GSGFValue.html" title="GSGFValue"><span class="type">GSGFValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFProperty.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GSGFProperty
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFProperty.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GSGFProperty implements
+ <a class="link" href="GSGFComponent.html" title="GSGFComponent">GSGFComponent</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GSGFProperty.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> has a name (its identifier) and an associated list of values.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFProperty.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFProperty-struct"></a><h3>struct GSGFProperty</h3>
+<pre class="programlisting">struct GSGFProperty;</pre>
+<p>
+One instance of a <a class="link" href="GSGFProperty.html#GSGFPropertyClass" title="struct GSGFPropertyClass"><span class="type">GSGFPropertyClass</span></a>.  All properties are private.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFPropertyClass"></a><h3>struct GSGFPropertyClass</h3>
+<pre class="programlisting">struct GSGFPropertyClass {
+};
+</pre>
+<p>
+Class representing a property of games resp. game trees in a
+Simple Game Format (SGF) file.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-property-get-id"></a><h3>gsgf_property_get_id ()</h3>
+<pre class="programlisting">const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *       gsgf_property_get_id                (<em class="parameter"><code>const <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> *self</code></em>);</pre>
+<p>
+Retrieve the id of a property.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>Returns the id of the property. <span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>]</span>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-property-get-node"></a><h3>gsgf_property_get_node ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFNode.html" title="GSGFNode"><span class="returnvalue">GSGFNode</span></a> *          gsgf_property_get_node              (<em class="parameter"><code>const <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> *self</code></em>);</pre>
+<p>
+Retrieve the <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="type">GSGFNode</span></a> that this <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> belongs to.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>Returns the <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="type">GSGFNode</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-property-get-value"></a><h3>gsgf_property_get_value ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFValue.html" title="GSGFValue"><span class="returnvalue">GSGFValue</span></a> *         gsgf_property_get_value             (<em class="parameter"><code>const <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> *self</code></em>);</pre>
+<p>
+Retrieve the value of a property.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>Returns the value as a <a class="link" href="GSGFValue.html" title="GSGFValue"><span class="type">GSGFValue</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-property-set-value"></a><h3>gsgf_property_set_value ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_property_set_value             (<em class="parameter"><code><a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GSGFValue.html" title="GSGFValue"><span class="type">GSGFValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Set the value of a property.  An old value will be deleted if present.
+</p>
+<p>
+If the value is a <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> it will be automatically cooked.  If it is
+already cooked it is assumed that you know what you are doing.
+</p>
+<p>
+The value is owned by the <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> after you added it.  You should
+not <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> it.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>The value to set.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occurring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for success, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> for failure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

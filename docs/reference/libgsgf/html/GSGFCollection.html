@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFCollection</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="components.html" title="Components">
+<link rel="prev" href="GSGFComponent.html" title="GSGFComponent">
+<link rel="next" href="GSGFGameTree.html" title="GSGFGameTree">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFComponent.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="components.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFGameTree.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFCollection.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFCollection.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFCollection.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GSGFCollection.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFCollection"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFCollection.top_of_page"></a>GSGFCollection</span></h2>
+<p>GSGFCollection — A collection of games.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFCollection.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFCollection.html#GSGFCollection-struct" title="struct GSGFCollection">GSGFCollection</a>;
+struct              <a class="link" href="GSGFCollection.html#GSGFCollectionClass" title="struct GSGFCollectionClass">GSGFCollectionClass</a>;
+struct <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="returnvalue">_GSGFGameTree</span></a> * <a class="link" href="GSGFCollection.html#gsgf-collection-add-game-tree" title="gsgf_collection_add_game_tree ()">gsgf_collection_add_game_tree</a>    (<em class="parameter"><code><a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="GSGFCollection.html#gsgf-collection-get-game-trees" title="gsgf_collection_get_game_trees ()">gsgf_collection_get_game_trees</a>      (<em class="parameter"><code>const <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> *self</code></em>);
+<a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="returnvalue">GSGFCollection</span></a> *    <a class="link" href="GSGFCollection.html#gsgf-collection-new" title="gsgf_collection_new ()">gsgf_collection_new</a>                 ();
+<a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="returnvalue">GSGFCollection</span></a> *    <a class="link" href="GSGFCollection.html#gsgf-collection-parse-file" title="gsgf_collection_parse_file ()">gsgf_collection_parse_file</a>          (<em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+<a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="returnvalue">GSGFCollection</span></a> *    <a class="link" href="GSGFCollection.html#gsgf-collection-parse-stream" title="gsgf_collection_parse_stream ()">gsgf_collection_parse_stream</a>        (<em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> *stream</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFCollection.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GSGFCollection
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFCollection.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GSGFCollection implements
+ <a class="link" href="GSGFComponent.html" title="GSGFComponent">GSGFComponent</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GSGFCollection.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> represents a collection of games, for example a match.
+It is the root in the SGF hierarchy.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFCollection.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFCollection-struct"></a><h3>struct GSGFCollection</h3>
+<pre class="programlisting">struct GSGFCollection;</pre>
+<p>
+A collection of SGF games.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFCollectionClass"></a><h3>struct GSGFCollectionClass</h3>
+<pre class="programlisting">struct GSGFCollectionClass {
+};
+</pre>
+<p>
+Class definition for a collection of SGF games.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-collection-add-game-tree"></a><h3>gsgf_collection_add_game_tree ()</h3>
+<pre class="programlisting">struct <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="returnvalue">_GSGFGameTree</span></a> * gsgf_collection_add_game_tree    (<em class="parameter"><code><a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>);</pre>
+<p>
+Adds a fresh, empty <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> instance to a <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> to extend.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flavor</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> to use.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The freshly created <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-collection-get-game-trees"></a><h3>gsgf_collection_get_game_trees ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             gsgf_collection_get_game_trees      (<em class="parameter"><code>const <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> *self</code></em>);</pre>
+<p>
+Get the list of <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> objects stored in a <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a>.
+</p>
+<p>
+This list is not a copy.  You should not free it.  The list becomes invalid,
+when you add or remove game trees.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>Returns a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> objects..</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-collection-new"></a><h3>gsgf_collection_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="returnvalue">GSGFCollection</span></a> *    gsgf_collection_new                 ();</pre>
+<p>
+Build an empty <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> in memory.  The function cannot fail.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occuring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>An empty <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-collection-parse-file"></a><h3>gsgf_collection_parse_file ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="returnvalue">GSGFCollection</span></a> *    gsgf_collection_parse_file          (<em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> *file</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Parses a <a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> into a <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> in memory.  A return value of
+non-<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> does not necessarily mean success.  A parse error normally results
+in a valid <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> object that holds only parts of the information
+from the stream.  Use <em class="parameter"><code>error</code></em> for error checking instead.
+</p>
+<p>
+See also <a class="link" href="GSGFCollection.html#gsgf-collection-parse-stream" title="gsgf_collection_parse_stream ()"><code class="function">gsgf_collection_parse_stream()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>file</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/gio/unstable/GFile.html"><span class="type">GFile</span></a> to parse.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occurring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on error.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-collection-parse-stream"></a><h3>gsgf_collection_parse_stream ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="returnvalue">GSGFCollection</span></a> *    gsgf_collection_parse_stream        (<em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> *stream</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> *cancellable</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Parses an input stream into a <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> in memory
+</p>
+<p>
+See also <a class="link" href="GSGFCollection.html#gsgf-collection-parse-file" title="gsgf_collection_parse_file ()"><code class="function">gsgf_collection_parse_file()</code></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>stream</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/gio/unstable/GInputStream.html"><span class="type">GInputStream</span></a> to parse.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cancellable</code></em> :</span></p></td>
+<td>optional <a href="http://library.gnome.org/devel/gio/unstable/GCancellable.html"><span class="type">GCancellable</span></a> object, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occuring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> on error.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

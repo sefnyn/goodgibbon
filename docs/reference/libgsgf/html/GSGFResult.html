@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFResult</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="sgf-high-level-types.html" title="SGF High Level Types">
+<link rel="prev" href="GSGFDouble.html" title="GSGFDouble">
+<link rel="next" href="GSGFDate.html" title="GSGFDate">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFDouble.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="sgf-high-level-types.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFDate.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFResult.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFResult.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFResult.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFResult"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFResult.top_of_page"></a>GSGFResult</span></h2>
+<p>GSGFResult — A result of a game in SGF!
+Since: 0.1.0</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFResult.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFResult.html#GSGFResult-struct" title="struct GSGFResult">GSGFResult</a>;
+enum                <a class="link" href="GSGFResult.html#GSGFResultCause" title="enum GSGFResultCause">GSGFResultCause</a>;
+struct              <a class="link" href="GSGFResult.html#GSGFResultClass" title="struct GSGFResultClass">GSGFResultClass</a>;
+enum                <a class="link" href="GSGFResult.html#GSGFResultWinner" title="enum GSGFResultWinner">GSGFResultWinner</a>;
+<a class="link" href="GSGFResult.html#GSGFResultCause" title="enum GSGFResultCause"><span class="returnvalue">GSGFResultCause</span></a>     <a class="link" href="GSGFResult.html#gsgf-result-get-cause" title="gsgf_result_get_cause ()">gsgf_result_get_cause</a>               (<em class="parameter"><code>const <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             <a class="link" href="GSGFResult.html#gsgf-result-get-score" title="gsgf_result_get_score ()">gsgf_result_get_score</a>               (<em class="parameter"><code>const <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a> *self</code></em>);
+<a class="link" href="GSGFResult.html#GSGFResultWinner" title="enum GSGFResultWinner"><span class="returnvalue">GSGFResultWinner</span></a>    <a class="link" href="GSGFResult.html#gsgf-result-get-winner" title="gsgf_result_get_winner ()">gsgf_result_get_winner</a>              (<em class="parameter"><code>const <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a> *self</code></em>);
+<a class="link" href="GSGFResult.html" title="GSGFResult"><span class="returnvalue">GSGFResult</span></a> *        <a class="link" href="GSGFResult.html#gsgf-result-new" title="gsgf_result_new ()">gsgf_result_new</a>                     (<em class="parameter"><code><a class="link" href="GSGFResult.html#GSGFResultWinner" title="enum GSGFResultWinner"><span class="type">GSGFResultWinner</span></a> winner</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> score</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GSGFResult.html#GSGFResultCause" title="enum GSGFResultCause"><span class="type">GSGFResultCause</span></a> cause</code></em>);
+<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   <a class="link" href="GSGFResult.html#gsgf-result-new-from-raw" title="gsgf_result_new_from_raw ()">gsgf_result_new_from_raw</a>            (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">struct _GSGFProperty</span> *property</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFResult.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>
+         +----<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue">GSGFCookedValue</a>
+               +----<a class="link" href="GSGFText.html" title="GSGFText">GSGFText</a>
+                     +----<a class="link" href="GSGFSimpleText.html" title="GSGFSimpleText">GSGFSimpleText</a>
+                           +----GSGFResult
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFResult.description"></a><h2>Description</h2>
+<p>
+The SGF specification stipulates a certain format for expressing the
+result of the game.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFResult.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFResult-struct"></a><h3>struct GSGFResult</h3>
+<pre class="programlisting">struct GSGFResult;</pre>
+<p>
+One instance of a <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a>.  All properties are private.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFResultCause"></a><h3>enum GSGFResultCause</h3>
+<pre class="programlisting">typedef enum {
+        GSGF_RESULT_NORMAL = 0,
+        GSGF_RESULT_RESIGNATION = 1,
+        GSGF_RESULT_TIME = 2,
+        GSGF_RESULT_FORFEIT = 3,
+        GSGF_RESULT_OTHER = 32767
+} GSGFResultCause;
+</pre>
+<p>
+Cause for the end of a game.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><a name="GSGF-RESULT-NORMAL:CAPS"></a><span class="term"><code class="literal">GSGF_RESULT_NORMAL</code></span></p></td>
+<td>Normal end.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-RESULT-RESIGNATION:CAPS"></a><span class="term"><code class="literal">GSGF_RESULT_RESIGNATION</code></span></p></td>
+<td>Resignation.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-RESULT-TIME:CAPS"></a><span class="term"><code class="literal">GSGF_RESULT_TIME</code></span></p></td>
+<td>Win on time.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-RESULT-FORFEIT:CAPS"></a><span class="term"><code class="literal">GSGF_RESULT_FORFEIT</code></span></p></td>
+<td>Forfeit.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-RESULT-OTHER:CAPS"></a><span class="term"><code class="literal">GSGF_RESULT_OTHER</code></span></p></td>
+<td>Other.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFResultClass"></a><h3>struct GSGFResultClass</h3>
+<pre class="programlisting">struct GSGFResultClass {
+};
+</pre>
+<p>
+Representation of a game result!
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFResultWinner"></a><h3>enum GSGFResultWinner</h3>
+<pre class="programlisting">typedef enum {
+        GSGF_RESULT_BLACK = 0,
+        GSGF_RESULT_WHITE = 1,
+        GSGF_RESULT_DRAW = 2,
+        GSGF_RESULT_VOID = 3,
+        GSGF_RESULT_UNKNOWN = 32767
+} GSGFResultWinner;
+</pre>
+<p>
+Constants for the winner of a game.  Note that <a class="link" href="GSGFColor.html#GSGFColorEnum" title="enum GSGFColorEnum"><span class="type">GSGFColorEnum</span></a> is a
+compatible subset of this enumeration and it is safe to cast from a
+<a class="link" href="GSGFColor.html#GSGFColorEnum" title="enum GSGFColorEnum"><span class="type">GSGFColorEnum</span></a> to a <a class="link" href="GSGFResult.html#GSGFResultWinner" title="enum GSGFResultWinner"><span class="type">GSGFResultWinner</span></a> but not the other way round.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><a name="GSGF-RESULT-BLACK:CAPS"></a><span class="term"><code class="literal">GSGF_RESULT_BLACK</code></span></p></td>
+<td>Black.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-RESULT-WHITE:CAPS"></a><span class="term"><code class="literal">GSGF_RESULT_WHITE</code></span></p></td>
+<td>White.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-RESULT-DRAW:CAPS"></a><span class="term"><code class="literal">GSGF_RESULT_DRAW</code></span></p></td>
+<td>A draw.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-RESULT-VOID:CAPS"></a><span class="term"><code class="literal">GSGF_RESULT_VOID</code></span></p></td>
+<td>No result of suspended play.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-RESULT-UNKNOWN:CAPS"></a><span class="term"><code class="literal">GSGF_RESULT_UNKNOWN</code></span></p></td>
+<td>An unknown result.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-result-get-cause"></a><h3>gsgf_result_get_cause ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFResult.html#GSGFResultCause" title="enum GSGFResultCause"><span class="returnvalue">GSGFResultCause</span></a>     gsgf_result_get_cause               (<em class="parameter"><code>const <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a> *self</code></em>);</pre>
+<p>
+The cause of the end-of-game encoded into <em class="parameter"><code>self</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the encoded cause.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-result-get-score"></a><h3>gsgf_result_get_score ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="returnvalue">gdouble</span></a>             gsgf_result_get_score               (<em class="parameter"><code>const <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a> *self</code></em>);</pre>
+<p>
+The score encoded into <em class="parameter"><code>self</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the encoded score.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-result-get-winner"></a><h3>gsgf_result_get_winner ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFResult.html#GSGFResultWinner" title="enum GSGFResultWinner"><span class="returnvalue">GSGFResultWinner</span></a>    gsgf_result_get_winner              (<em class="parameter"><code>const <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a> *self</code></em>);</pre>
+<p>
+The winner encoded into <em class="parameter"><code>self</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the encoded winner.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-result-new"></a><h3>gsgf_result_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFResult.html" title="GSGFResult"><span class="returnvalue">GSGFResult</span></a> *        gsgf_result_new                     (<em class="parameter"><code><a class="link" href="GSGFResult.html#GSGFResultWinner" title="enum GSGFResultWinner"><span class="type">GSGFResultWinner</span></a> winner</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> score</code></em>,
+                                                         <em class="parameter"><code><a class="link" href="GSGFResult.html#GSGFResultCause" title="enum GSGFResultCause"><span class="type">GSGFResultCause</span></a> cause</code></em>);</pre>
+<p>
+Create a new <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a>.
+</p>
+<p>
+The SGF specification for backgammon defines an extension to the
+regular result format.  For backgammon you can specifiy a score along
+with a resignation.
+</p>
+<p>
+This library considers this "extension" as compatible with the regular
+definition of a result in SGF.  It further extends the definition
+and also allows scores for wins on time or forfeits.
+</p>
+<p>
+If you want to ensure full compatibility with the SGF specification
+always give a score of 0 for all irregular ends of a game.
+</p>
+<p>
+In extension to the literal wording of the SGF specification, this library
+parses results case-insensitive and accepts "T" and "F" as shortcuts
+for wins on time or forfeit.  When writing back results, they are always
+correctly spelt.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>winner</code></em> :</span></p></td>
+<td>The winner of the game.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>score</code></em> :</span></p></td>
+<td>Score or 0 for no score.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>cause</code></em> :</span></p></td>
+<td>Cause for the end of the game.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a>, the function cannot fail.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-result-new-from-raw"></a><h3>gsgf_result_new_from_raw ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   gsgf_result_new_from_raw            (<em class="parameter"><code>const <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> *flavor</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">struct _GSGFProperty</span> *property</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a> from a <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a>.  This constructor is only
+interesting for people that write their own <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>raw</code></em> :</span></p></td>
+<td>A <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> containing exactly one value that should be stored.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>flavor</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> of the current <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>property</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a> <em class="parameter"><code>raw</code></em> came from.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occurring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFResult.html" title="GSGFResult"><span class="type">GSGFResult</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> in case of an error.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

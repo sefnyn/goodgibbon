@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFCompose</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="sgf-primitives.html" title="SGF Primitives">
+<link rel="prev" href="GSGFSimpleText.html" title="GSGFSimpleText">
+<link rel="next" href="GSGFEmpty.html" title="GSGFEmpty">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFSimpleText.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="sgf-primitives.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFEmpty.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFCompose.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFCompose.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFCompose.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFCompose"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFCompose.top_of_page"></a>GSGFCompose</span></h2>
+<p>GSGFCompose — Composed data in SGF files.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFCompose.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFCompose.html#GSGFCompose-struct" title="struct GSGFCompose">GSGFCompose</a>;
+struct              <a class="link" href="GSGFCompose.html#GSGFComposeClass" title="struct GSGFComposeClass">GSGFComposeClass</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>               <a class="link" href="GSGFCompose.html#gsgf-compose-get-number-of-values" title="gsgf_compose_get_number_of_values ()">gsgf_compose_get_number_of_values</a>   (<em class="parameter"><code>const <a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="type">GSGFCompose</span></a> *self</code></em>);
+<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   <a class="link" href="GSGFCompose.html#gsgf-compose-get-value" title="gsgf_compose_get_value ()">gsgf_compose_get_value</a>              (<em class="parameter"><code>const <a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="type">GSGFCompose</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);
+<a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="returnvalue">GSGFCompose</span></a> *       <a class="link" href="GSGFCompose.html#gsgf-compose-new" title="gsgf_compose_new ()">gsgf_compose_new</a>                    (<em class="parameter"><code><a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFCompose.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>
+         +----<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue">GSGFCookedValue</a>
+               +----GSGFCompose
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFCompose.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="type">GSGFCompose</span></a> is a list of <a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a> objects.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFCompose.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFCompose-struct"></a><h3>struct GSGFCompose</h3>
+<pre class="programlisting">struct GSGFCompose;</pre>
+<p>
+Composed values are two values separated by a colon.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFComposeClass"></a><h3>struct GSGFComposeClass</h3>
+<pre class="programlisting">struct GSGFComposeClass {
+};
+</pre>
+<p>
+Class definition for a composed value.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-compose-get-number-of-values"></a><h3>gsgf_compose_get_number_of_values ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>               gsgf_compose_get_number_of_values   (<em class="parameter"><code>const <a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="type">GSGFCompose</span></a> *self</code></em>);</pre>
+<p>
+Get the number of items.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="type">GSGFCompose</span></a> object.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The number of values stored.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-compose-get-value"></a><h3>gsgf_compose_get_value ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="returnvalue">GSGFCookedValue</span></a> *   gsgf_compose_get_value              (<em class="parameter"><code>const <a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="type">GSGFCompose</span></a> *self</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gsize"><span class="type">gsize</span></a> i</code></em>);</pre>
+<p>
+Retrieve the value stored at position <em class="parameter"><code>i</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="type">GSGFCompose</span></a> object.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>i</code></em> :</span></p></td>
+<td>Position in the property list.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The value stored at position <em class="parameter"><code>i</code></em> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-compose-new"></a><h3>gsgf_compose_new ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="returnvalue">GSGFCompose</span></a> *       gsgf_compose_new                    (<em class="parameter"><code><a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a> *value</code></em>,
+                                                         <em class="parameter"><code>...</code></em>);</pre>
+<p>
+Creates a new <a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="type">GSGFCompose</span></a> from a list of <a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a> objects.  The
+stored items are "hijacked" and are now considered property of the composed
+object, and you must not <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a> them yourself.
+</p>
+<p>
+Note that you must pass cooked values!  Passing a <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> would not make
+sense since a <a class="link" href="GSGFRaw.html" title="GSGFRaw"><span class="type">GSGFRaw</span></a> can actually be a list of values.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>value</code></em> :</span></p></td>
+<td>The first value to store.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>...</code></em> :</span></p></td>
+<td>Other optional values, terminated by <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The new <a class="link" href="GSGFCompose.html" title="GSGFCompose"><span class="type">GSGFCompose</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

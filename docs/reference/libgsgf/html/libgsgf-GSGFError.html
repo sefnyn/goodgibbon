@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFError</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="miscellaneous.html" title="Miscellaneous">
+<link rel="prev" href="miscellaneous.html" title="Miscellaneous">
+<link rel="next" href="libgsgf-Utility-Functions.html" title="Utility Functions">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="miscellaneous.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="miscellaneous.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="libgsgf-Utility-Functions.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libgsgf-GSGFError.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libgsgf-GSGFError.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libgsgf-GSGFError"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libgsgf-GSGFError.top_of_page"></a>GSGFError</span></h2>
+<p>GSGFError — GSGF Errors</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libgsgf-GSGFError.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">enum                <a class="link" href="libgsgf-GSGFError.html#GSGFError" title="enum GSGFError">GSGFError</a>;
+#define             <a class="link" href="libgsgf-GSGFError.html#GSGF-ERROR:CAPS" title="GSGF_ERROR">GSGF_ERROR</a>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>              <a class="link" href="libgsgf-GSGFError.html#gsgf-error-quark" title="gsgf_error_quark ()">gsgf_error_quark</a>                    (<em class="parameter"><code><span class="type">void</span></code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libgsgf-GSGFError.description"></a><h2>Description</h2>
+<p>
+Currently contains only the <a href="http://library.gnome.org/devel/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a> for GSGF errors.
+</p>
+</div>
+<div class="refsect1">
+<a name="libgsgf-GSGFError.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFError"></a><h3>enum GSGFError</h3>
+<pre class="programlisting">typedef enum {
+        GSGF_ERROR_NONE = 0,
+        GSGF_ERROR_FLAVOR_UNSUPPORTED = 1,
+        GSGF_ERROR_FLAVOR_MISMATCH = 2,
+        GSGF_ERROR_SYNTAX = 3,
+        GSGF_ERROR_EMPTY_COLLECTION = 4,
+        GSGF_ERROR_PROPERTY_EXISTS = 5,
+        GSGF_ERROR_EMPTY_PROPERTY = 6,
+        GSGF_ERROR_INTERNAL_ERROR = 7,
+        GSGF_ERROR_INVALID_NUMBER = 8,
+        GSGF_ERROR_NAN = 9,
+        GSGF_ERROR_LIST_TOO_LONG = 10,
+        GSGF_ERROR_LIST_EMPTY = 11,
+        GSGF_ERROR_SEMANTIC_ERROR = 12,
+        GSGF_ERROR_INVALID_MOVE = 14,
+        GSGF_ERROR_INVALID_POINT = 15,
+        GSGF_ERROR_INVALID_STONE = 16,
+        GSGF_ERROR_USAGE_ERROR = 17,
+        GSGF_ERROR_NON_UNIQUE_POINT = 18,
+        GSGF_ERROR_NON_UNIQUE_STONE = 19,
+        GSGF_ERROR_DOUBLE_OUT_OF_RANGE = 20,
+        GSGF_ERROR_INVALID_DATE_FORMAT = 21
+} GSGFError;
+</pre>
+<p>
+Error codes for the domain <a class="link" href="libgsgf-GSGFError.html#GSGF-ERROR:CAPS" title="GSGF_ERROR"><span class="type">GSGF_ERROR</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><a name="GSGF-ERROR-NONE:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_NONE</code></span></p></td>
+<td>No error.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-FLAVOR-UNSUPPORTED:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_FLAVOR_UNSUPPORTED</code></span></p></td>
+<td>Unknown SGF flavor.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-FLAVOR-MISMATCH:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_FLAVOR_MISMATCH</code></span></p></td>
+<td>Attempt to insert a child of different flavor
+                             than the parent.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-SYNTAX:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_SYNTAX</code></span></p></td>
+<td>Syntax error.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-EMPTY-COLLECTION:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_EMPTY_COLLECTION</code></span></p></td>
+<td>Collection is empty.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-PROPERTY-EXISTS:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_PROPERTY_EXISTS</code></span></p></td>
+<td>Attempt to insert a property with an already
+                             existing name.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-EMPTY-PROPERTY:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_EMPTY_PROPERTY</code></span></p></td>
+<td>Attempt to write a property without a value.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-INTERNAL-ERROR:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_INTERNAL_ERROR</code></span></p></td>
+<td>Internal error.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-INVALID-NUMBER:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_INVALID_NUMBER</code></span></p></td>
+<td>Invalid number format.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-NAN:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_NAN</code></span></p></td>
+<td>Not a number.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-LIST-TOO-LONG:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_LIST_TOO_LONG</code></span></p></td>
+<td>A list of values was to long for the semantics
+                           of a particular property.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-LIST-EMPTY:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_LIST_EMPTY</code></span></p></td>
+<td>A "list of" was empty.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-SEMANTIC-ERROR:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_SEMANTIC_ERROR</code></span></p></td>
+<td>Semantic error i.e. the data did not match the
+                            expectations.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-INVALID-MOVE:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_INVALID_MOVE</code></span></p></td>
+<td>Invalid syntax for a move.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-INVALID-POINT:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_INVALID_POINT</code></span></p></td>
+<td>Invalid syntax for a point.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-INVALID-STONE:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_INVALID_STONE</code></span></p></td>
+<td>Invalid syntax for a stone.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-USAGE-ERROR:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_USAGE_ERROR</code></span></p></td>
+<td>Invalid library usage.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-NON-UNIQUE-POINT:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_NON_UNIQUE_POINT</code></span></p></td>
+<td>Non-unique points in list.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-NON-UNIQUE-STONE:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_NON_UNIQUE_STONE</code></span></p></td>
+<td>Non-unique stones in list.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-DOUBLE-OUT-OF-RANGE:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_DOUBLE_OUT_OF_RANGE</code></span></p></td>
+<td>A <a class="link" href="GSGFDouble.html" title="GSGFDouble"><span class="type">GSGFDouble</span></a> was set to something out of
+                                 the range of a <a class="link" href="GSGFDouble.html#GSGFDoubleEnum" title="enum GSGFDoubleEnum"><span class="type">GSGFDoubleEnum</span></a>.
+</td>
+</tr>
+<tr>
+<td><p><a name="GSGF-ERROR-INVALID-DATE-FORMAT:CAPS"></a><span class="term"><code class="literal">GSGF_ERROR_INVALID_DATE_FORMAT</code></span></p></td>
+<td>A <a href="GSGFDate.html"><span class="type">GSGFDates</span></a> could not be parsed.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGF-ERROR:CAPS"></a><h3>GSGF_ERROR</h3>
+<pre class="programlisting">#define GSGF_ERROR gsgf_error_quark ()
+</pre>
+<p>
+Error domain for GSGF.  Errors in this domain will be from the
+<a class="link" href="libgsgf-GSGFError.html#GSGFError" title="enum GSGFError"><span class="type">GSGFError</span></a> enumeration.
+See <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> for more information on error domains.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-error-quark"></a><h3>gsgf_error_quark ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Quarks.html#GQuark"><span class="returnvalue">GQuark</span></a>              gsgf_error_quark                    (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Gets The GSGF Error Quark.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody><tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Quarks.html#GQuark"><span class="type">GQuark</span></a>.</td>
+</tr></tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

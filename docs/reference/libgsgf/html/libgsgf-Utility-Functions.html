@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Utility Functions</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="miscellaneous.html" title="Miscellaneous">
+<link rel="prev" href="libgsgf-GSGFError.html" title="GSGFError">
+<link rel="next" href="pt03.html" title="Part III. SGF Flavors">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="libgsgf-GSGFError.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="miscellaneous.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="pt03.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#libgsgf-Utility-Functions.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#libgsgf-Utility-Functions.description" class="shortcut">Description</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="libgsgf-Utility-Functions"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="libgsgf-Utility-Functions.top_of_page"></a>Utility Functions</span></h2>
+<p>Utility Functions — Utility Functions</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="libgsgf-Utility-Functions.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libgsgf-Utility-Functions.html#gsgf-ascii-dtostring" title="gsgf_ascii_dtostring ()">gsgf_ascii_dtostring</a>                (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> d</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> width</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> precision</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> zeropad</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> zerotrim</code></em>);
+<span class="returnvalue">void</span>                <a class="link" href="libgsgf-Utility-Functions.html#gsgf-threads-init" title="gsgf_threads_init ()">gsgf_threads_init</a>                   (<em class="parameter"><code><span class="type">void</span></code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libgsgf-Utility-Functions.html#gsgf-util-read-simple-text" title="gsgf_util_read_simple_text ()">gsgf_util_read_simple_text</a>          (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **end</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> delim</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             <a class="link" href="libgsgf-Utility-Functions.html#gsgf-util-read-text" title="gsgf_util_read_text ()">gsgf_util_read_text</a>                 (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **end</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> delim</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="libgsgf-Utility-Functions.description"></a><h2>Description</h2>
+<p>
+Some utility functions for libgsgf.
+</p>
+</div>
+<div class="refsect1">
+<a name="libgsgf-Utility-Functions.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="gsgf-ascii-dtostring"></a><h3>gsgf_ascii_dtostring ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gsgf_ascii_dtostring                (<em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> d</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> width</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> precision</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> zeropad</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> zerotrim</code></em>);</pre>
+<p>
+Formats <em class="parameter"><code>d</code></em> as a string using the portable POSIX locale, i.e. using the
+dot ('.') as the decimal point, and no thousands separator.  The function
+is threadsafe.
+</p>
+<p>
+Invalid values for <em class="parameter"><code>width</code></em> or <em class="parameter"><code>precision</code></em> are silently replaced by -1.
+</p>
+<p>
+The number is first formatted using standard printf formatting directives.
+If both <em class="parameter"><code>width</code></em> and <em class="parameter"><code>precision</code></em> are given, the format string is
+"%<em class="parameter"><code>width</code></em>.<em class="parameter"><code>precision</code></em> f" (without the space in front of the f).  If <em class="parameter"><code>zeropad</code></em>
+is TRUE, the format string is "%0<em class="parameter"><code>width</code></em>.<em class="parameter"><code>precision</code></em> f" instead (again
+without the gratuitous space in front of the f).
+</p>
+<p>
+The default precision is 6.  There is no default width.  If <em class="parameter"><code>width</code></em> is not
+specified, the non-fractional part will be as large as necessary.
+</p>
+<p>
+If <em class="parameter"><code>zerotrim</code></em> is true, trailing zeros after the decimal point are removed.
+If no decimal digits are left, the decimal point is removed as well.
+</p>
+<p>
+Example: If you zero-trim the intermediate output "123.45600", the result
+will be "123.456".  Zero-trimming the output "123.000" will result in "123".
+Zero-trimming the output "123.000000001" will not change the string at
+all.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>d</code></em> :</span></p></td>
+<td>The <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gdouble"><span class="type">gdouble</span></a> to format.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>width</code></em> :</span></p></td>
+<td>(Maximum) output width before zero-trimming or -1 for default</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>precision</code></em> :</span></p></td>
+<td>Decimal precision before zero-trimming or -1 for default</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zeropad</code></em> :</span></p></td>
+<td>Left-pad with zeros if <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a>, and <em class="parameter"><code>width</code></em> is greater than 0</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>zerotrim</code></em> :</span></p></td>
+<td>Right-trime trailing zeros if <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><span class="type">TRUE</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The formatted value in a newly allocated buffer.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-threads-init"></a><h3>gsgf_threads_init ()</h3>
+<pre class="programlisting"><span class="returnvalue">void</span>                gsgf_threads_init                   (<em class="parameter"><code><span class="type">void</span></code></em>);</pre>
+<p>
+Initializes libgsgf so that it can be used from multiple threads.
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Deprecated-Thread-APIs.html#g-thread-init"><code class="function">g_thread_init()</code></a> must be called previous to this function.
+</p>
+<p>
+If you want to use libgsgf in a multi-threaded application, you must
+call this function prior to any other libgsgf function.
+</p>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-util-read-simple-text"></a><h3>gsgf_util_read_simple_text ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gsgf_util_read_simple_text          (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **end</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> delim</code></em>);</pre>
+<p>
+Extracts a SGF simple text from a string.  The function unescapes everything
+according to the SGF specification.  It stops reading at the first
+occurence of the unescaped delimiter <em class="parameter"><code>delim</code></em> or a null byte, whichever
+comes first.
+</p>
+<p>
+If you want to just unescape a string without a delimiter, simply pass
+0 for <em class="parameter"><code>delim</code></em>.
+</p>
+<p>
+The string returned must be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.  The function cannot
+fail unless you pass a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> pointer in <em class="parameter"><code>raw</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>raw</code></em> :</span></p></td>
+<td>The string to read from.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>end</code></em> :</span></p></td>
+<td>Optional location to store an end pointer.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>delim</code></em> :</span></p></td>
+<td>Stop reading, when encountering this <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The extracted string copied to a newly allocated buffer.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-util-read-text"></a><h3>gsgf_util_read_text ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="returnvalue">gchar</span></a> *             gsgf_util_read_text                 (<em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *raw</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> **end</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> delim</code></em>);</pre>
+<p>
+Extracts a SGF text value from a string.  The function unescapes everything
+according to the SGF specification.  It stops reading at the first
+occurence of the unescaped delimiter <em class="parameter"><code>delim</code></em> or a null byte, whichever
+comes first.
+</p>
+<p>
+If you want to just unescape a string without a delimiter, simply pass
+0 for <em class="parameter"><code>delim</code></em>.
+</p>
+<p>
+The string returned must be freed with <a href="http://library.gnome.org/devel/glib/unstable/glib-Memory-Allocation.html#g-free"><code class="function">g_free()</code></a>.  The function cannot
+fail unless you pass a <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><span class="type">NULL</span></a> pointer in <em class="parameter"><code>raw</code></em>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>raw</code></em> :</span></p></td>
+<td>The string to read from.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>end</code></em> :</span></p></td>
+<td>Optional location to store an end pointer.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>delim</code></em> :</span></p></td>
+<td>Stop reading, when encountering this <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The extracted string copied to a newly allocated buffer.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

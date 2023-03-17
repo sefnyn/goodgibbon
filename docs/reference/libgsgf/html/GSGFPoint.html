@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFPoint</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="sgf-flavor-api.html" title="SGF Flavor API">
+<link rel="prev" href="GSGFMove.html" title="GSGFMove">
+<link rel="next" href="GSGFStone.html" title="GSGFStone">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFMove.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="sgf-flavor-api.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFStone.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFPoint.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFPoint.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFPoint.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFPoint"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFPoint.top_of_page"></a>GSGFPoint</span></h2>
+<p>GSGFPoint — Abstract base class for an SGF point.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFPoint.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFPoint.html#GSGFPoint-struct" title="struct GSGFPoint">GSGFPoint</a>;
+struct              <a class="link" href="GSGFPoint.html#GSGFPointClass" title="struct GSGFPointClass">GSGFPointClass</a>;
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                <a class="link" href="GSGFPoint.html#gsgf-point-get-normalized-value" title="gsgf_point_get_normalized_value ()">gsgf_point_get_normalized_value</a>     (<em class="parameter"><code>const <a class="link" href="GSGFPoint.html" title="GSGFPoint"><span class="type">GSGFPoint</span></a> *self</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFPoint.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>
+         +----<a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue">GSGFCookedValue</a>
+               +----GSGFPoint
+                     +----<a class="link" href="GSGFPointBackgammon.html" title="GSGFPointBackgammon">GSGFPointBackgammon</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFPoint.description"></a><h2>Description</h2>
+<p>
+The http://www.red-bean.com/sgf/sgf4.html
+specification does not define the details for a point.  The specific
+point incarnations should inherit from this class.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFPoint.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFPoint-struct"></a><h3>struct GSGFPoint</h3>
+<pre class="programlisting">struct GSGFPoint;</pre>
+<p>
+One instance of a <a class="link" href="GSGFPoint.html#GSGFPointClass" title="struct GSGFPointClass"><span class="type">GSGFPointClass</span></a>.  All properties are private.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFPointClass"></a><h3>struct GSGFPointClass</h3>
+<pre class="programlisting">struct GSGFPointClass {
+};
+</pre>
+<p>
+Class representing a point of SGF.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-point-get-normalized-value"></a><h3>gsgf_point_get_normalized_value ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="returnvalue">gint</span></a>                gsgf_point_get_normalized_value     (<em class="parameter"><code>const <a class="link" href="GSGFPoint.html" title="GSGFPoint"><span class="type">GSGFPoint</span></a> *self</code></em>);</pre>
+<p>
+Get a unique <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gint"><span class="type">gint</span></a> identifying the point.  This method must be
+implemented by every <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a>.  It is used to compare points for
+equality.  This is needed in order to make sure that lists of points
+do not contain duplicate points.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFPoint.html" title="GSGFPoint"><span class="type">GSGFPoint</span></a> to query.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>A unique integer identifying the point.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

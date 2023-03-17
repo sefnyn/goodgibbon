@@ -1,0 +1,333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFGameTree</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="components.html" title="Components">
+<link rel="prev" href="GSGFCollection.html" title="GSGFCollection">
+<link rel="next" href="GSGFNode.html" title="GSGFNode">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFCollection.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="components.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFNode.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFGameTree.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFGameTree.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFGameTree.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#GSGFGameTree.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFGameTree"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFGameTree.top_of_page"></a>GSGFGameTree</span></h2>
+<p>GSGFGameTree — An SGF game tree.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFGameTree.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFGameTree.html#GSGFGameTree-struct" title="struct GSGFGameTree">GSGFGameTree</a>;
+struct              <a class="link" href="GSGFGameTree.html#GSGFGameTreeClass" title="struct GSGFGameTreeClass">GSGFGameTreeClass</a>;
+<a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="returnvalue">GSGFGameTree</span></a> *      <a class="link" href="GSGFGameTree.html#gsgf-game-tree-add-child" title="gsgf_game_tree_add_child ()">gsgf_game_tree_add_child</a>            (<em class="parameter"><code><a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);
+struct <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="returnvalue">_GSGFNode</span></a> *  <a class="link" href="GSGFGameTree.html#gsgf-game-tree-add-node" title="gsgf_game_tree_add_node ()">gsgf_game_tree_add_node</a>             (<em class="parameter"><code><a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="GSGFGameTree.html#gsgf-game-tree-get-children" title="gsgf_game_tree_get_children ()">gsgf_game_tree_get_children</a>         (<em class="parameter"><code>const <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);
+const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="returnvalue">GSGFFlavor</span></a> *  <a class="link" href="GSGFGameTree.html#gsgf-game-tree-get-flavor" title="gsgf_game_tree_get_flavor ()">gsgf_game_tree_get_flavor</a>           (<em class="parameter"><code>const <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="GSGFGameTree.html#gsgf-game-tree-get-last-node" title="gsgf_game_tree_get_last_node ()">gsgf_game_tree_get_last_node</a>        (<em class="parameter"><code>const <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             <a class="link" href="GSGFGameTree.html#gsgf-game-tree-get-nodes" title="gsgf_game_tree_get_nodes ()">gsgf_game_tree_get_nodes</a>            (<em class="parameter"><code>const <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);
+<a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="returnvalue">GSGFGameTree</span></a> *      <a class="link" href="GSGFGameTree.html#gsgf-game-tree-get-parent" title="gsgf_game_tree_get_parent ()">gsgf_game_tree_get_parent</a>           (<em class="parameter"><code>const <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="GSGFGameTree.html#gsgf-game-tree-set-application" title="gsgf_game_tree_set_application ()">gsgf_game_tree_set_application</a>      (<em class="parameter"><code><a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *app</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *version</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFGameTree.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GSGFGameTree
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFGameTree.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+GSGFGameTree implements
+ <a class="link" href="GSGFComponent.html" title="GSGFComponent">GSGFComponent</a>.</p>
+</div>
+<div class="refsect1">
+<a name="GSGFGameTree.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> represents a single game in a <a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a>.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFGameTree.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFGameTree-struct"></a><h3>struct GSGFGameTree</h3>
+<pre class="programlisting">struct GSGFGameTree;</pre>
+<p>
+One instance of a <a class="link" href="GSGFGameTree.html#GSGFGameTreeClass" title="struct GSGFGameTreeClass"><span class="type">GSGFGameTreeClass</span></a>.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFGameTreeClass"></a><h3>struct GSGFGameTreeClass</h3>
+<pre class="programlisting">struct GSGFGameTreeClass {
+};
+</pre>
+<p>
+Class representing a game_tree of games resp. game trees in a
+Simple Game Format (SGF) file.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-game-tree-add-child"></a><h3>gsgf_game_tree_add_child ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="returnvalue">GSGFGameTree</span></a> *      gsgf_game_tree_add_child            (<em class="parameter"><code><a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);</pre>
+<p>
+Add an empty <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> as a child.  The function cannot fail.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> to add.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the freshly added child <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-game-tree-add-node"></a><h3>gsgf_game_tree_add_node ()</h3>
+<pre class="programlisting">struct <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="returnvalue">_GSGFNode</span></a> *  gsgf_game_tree_add_node             (<em class="parameter"><code><a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);</pre>
+<p>
+Add an empty <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="type">GSGFNode</span></a> as a child.  The function cannot fail.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="type">GSGFNode</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>the freshly added child <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="type">GSGFNode</span></a>.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-game-tree-get-children"></a><h3>gsgf_game_tree_get_children ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             gsgf_game_tree_get_children         (<em class="parameter"><code>const <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);</pre>
+<p>
+Get the list of <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> objects stored in a <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.
+</p>
+<p>
+A <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> can have other <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> instances as children.
+This is seldom useful.
+</p>
+<p>
+This list is not a copy.  You should not free it.  The list becomes invalid,
+when you add or remove nodes.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>Returns a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> objects..</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-game-tree-get-flavor"></a><h3>gsgf_game_tree_get_flavor ()</h3>
+<pre class="programlisting">const <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="returnvalue">GSGFFlavor</span></a> *  gsgf_game_tree_get_flavor           (<em class="parameter"><code>const <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);</pre>
+<p>
+Get the flavor of the <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>:</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The <a class="link" href="GSGFFlavor.html" title="GSGFFlavor"><span class="type">GSGFFlavor</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> for unknown flavors.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-game-tree-get-last-node"></a><h3>gsgf_game_tree_get_last_node ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             gsgf_game_tree_get_last_node        (<em class="parameter"><code>const <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);</pre>
+<p>
+Get the last element of the list of <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="type">GSGFNode</span></a> objects stored in a
+<a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.
+</p>
+<p>
+This list is not a copy.  You should not free it.  The list becomes invalid,
+when you add or remove nodes.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>Returns a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> objects.</td>
+</tr>
+</tbody>
+</table></div>
+<p class="since">Since 0.2.0</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-game-tree-get-nodes"></a><h3>gsgf_game_tree_get_nodes ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="returnvalue">GList</span></a> *             gsgf_game_tree_get_nodes            (<em class="parameter"><code>const <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);</pre>
+<p>
+Get the list of <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="type">GSGFNode</span></a> objects stored in a <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.
+</p>
+<p>
+This list is not a copy.  You should not free it.  The list becomes invalid,
+when you add or remove nodes.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>the <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>Returns a <a href="http://library.gnome.org/devel/glib/unstable/glib-Doubly-Linked-Lists.html#GList"><span class="type">GList</span></a> of <a class="link" href="GSGFNode.html" title="GSGFNode"><span class="type">GSGFNode</span></a> objects..</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-game-tree-get-parent"></a><h3>gsgf_game_tree_get_parent ()</h3>
+<pre class="programlisting"><a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="returnvalue">GSGFGameTree</span></a> *      gsgf_game_tree_get_parent           (<em class="parameter"><code>const <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>);</pre>
+<p>
+Get the parent <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> of this <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> or NULL if it
+is the root of the collection.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>The parent <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> if there is none.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="gsgf-game-tree-set-application"></a><h3>gsgf_game_tree_set_application ()</h3>
+<pre class="programlisting"><a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            gsgf_game_tree_set_application      (<em class="parameter"><code><a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a> *self</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *app</code></em>,
+                                                         <em class="parameter"><code>const <a href="http://library.gnome.org/devel/glib/unstable/glib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *version</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> **error</code></em>);</pre>
+<p>
+Set the application name and version in the <em class="parameter"><code>self</code></em>.  By default, libgsgf
+will use only its own name and version information when writing out SGF
+files.  You can override the default values with this method.
+</p>
+<div class="variablelist"><table border="0" class="variablelist">
+<colgroup>
+<col align="left" valign="top">
+<col>
+</colgroup>
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>self</code></em> :</span></p></td>
+<td>The <a class="link" href="GSGFGameTree.html" title="GSGFGameTree"><span class="type">GSGFGameTree</span></a>.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>app</code></em> :</span></p></td>
+<td>The name of your application.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>version</code></em> :</span></p></td>
+<td>The version of your application.</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>error</code></em> :</span></p></td>
+<td>a <a href="http://library.gnome.org/devel/glib/unstable/glib-Error-Reporting.html#GError"><span class="type">GError</span></a> location to store the error occurring, or <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to ignore.</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+<a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> for success, <a href="http://library.gnome.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> for failure.</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>

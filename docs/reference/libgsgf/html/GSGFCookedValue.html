@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>GSGFCookedValue</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.78.0">
+<link rel="home" href="index.html" title="LIBGSGF Reference Manual">
+<link rel="up" href="sgf-primitives.html" title="SGF Primitives">
+<link rel="prev" href="GSGFRaw.html" title="GSGFRaw">
+<link rel="next" href="GSGFNumber.html" title="GSGFNumber">
+<meta name="generator" content="GTK-Doc V1.18 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="GSGFRaw.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="sgf-primitives.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">LIBGSGF Reference Manual</th>
+<td><a accesskey="n" href="GSGFNumber.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#GSGFCookedValue.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#GSGFCookedValue.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#GSGFCookedValue.object-hierarchy" class="shortcut">Object Hierarchy</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="GSGFCookedValue"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="GSGFCookedValue.top_of_page"></a>GSGFCookedValue</span></h2>
+<p>GSGFCookedValue — Abstract base class for qualified data stored in SGF
+files.</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="GSGFCookedValue.synopsis"></a><h2>Synopsis</h2>
+<pre class="synopsis">struct              <a class="link" href="GSGFCookedValue.html#GSGFCookedValue-struct" title="struct GSGFCookedValue">GSGFCookedValue</a>;
+struct              <a class="link" href="GSGFCookedValue.html#GSGFCookedValueClass" title="struct GSGFCookedValueClass">GSGFCookedValueClass</a>;
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFCookedValue.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.gnome.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----<a class="link" href="GSGFValue.html" title="GSGFValue">GSGFValue</a>
+         +----GSGFCookedValue
+               +----<a class="link" href="GSGFColor.html" title="GSGFColor">GSGFColor</a>
+               +----<a class="link" href="GSGFCompose.html" title="GSGFCompose">GSGFCompose</a>
+               +----<a class="link" href="GSGFText.html" title="GSGFText">GSGFText</a>
+               +----<a class="link" href="GSGFNumber.html" title="GSGFNumber">GSGFNumber</a>
+               +----<a class="link" href="GSGFEmpty.html" title="GSGFEmpty">GSGFEmpty</a>
+               +----<a class="link" href="GSGFListOf.html" title="GSGFListOf">GSGFListOf</a>
+               +----<a class="link" href="GSGFMove.html" title="GSGFMove">GSGFMove</a>
+               +----<a class="link" href="GSGFPoint.html" title="GSGFPoint">GSGFPoint</a>
+               +----<a class="link" href="GSGFReal.html" title="GSGFReal">GSGFReal</a>
+               +----<a class="link" href="GSGFStone.html" title="GSGFStone">GSGFStone</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="GSGFCookedValue.description"></a><h2>Description</h2>
+<p>
+A <a class="link" href="GSGFCookedValue.html" title="GSGFCookedValue"><span class="type">GSGFCookedValue</span></a> encapsulates qualified data read from an SGF file.  It
+is the result of qualifying that data, normally by cooking the top-level
+<a class="link" href="GSGFCollection.html" title="GSGFCollection"><span class="type">GSGFCollection</span></a>.
+</p>
+</div>
+<div class="refsect1">
+<a name="GSGFCookedValue.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="GSGFCookedValue-struct"></a><h3>struct GSGFCookedValue</h3>
+<pre class="programlisting">struct GSGFCookedValue;</pre>
+<p>
+Instance of a <a class="link" href="GSGFCookedValue.html#GSGFCookedValueClass" title="struct GSGFCookedValueClass"><span class="type">GSGFCookedValueClass</span></a>.  All properties are private.
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="GSGFCookedValueClass"></a><h3>struct GSGFCookedValueClass</h3>
+<pre class="programlisting">struct GSGFCookedValueClass {
+};
+</pre>
+<p>
+A class representing a cooked value of a <a class="link" href="GSGFProperty.html" title="GSGFProperty"><span class="type">GSGFProperty</span></a>.  All other
+properties and methods are private.
+</p>
+<p>
+It is the common base class of all other qualified SGF data types.
+</p>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.18</div>
+</body>
+</html>
