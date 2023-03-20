@@ -6,7 +6,7 @@ Packaged for Linux Debian by Nicholas Syrotiuk
 # Install
 sh autogen.sh  
 ./configure  
-sudo make CC="gcc -fcommon"  # see below
+sudo make CC="gcc -fcommon"  # see below  
 sudo make install
 
 ##
