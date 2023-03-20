@@ -1,6 +1,6 @@
 # Gibbon, a GTK+ client for FIBS
 
-Written by Guido Flohr:  http://www.guido-flohr.net/en/projects/
+Written by Guido Flohr:  http://www.guido-flohr.net/en/projects/  
 Packaged for Linux Debian by Nicholas Syrotiuk
 
 # Install
