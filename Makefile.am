@@ -18,9 +18,6 @@
 ACLOCAL_AMFLAGS = -I m4
 
 SUBDIRS = libgsgf libsvg libsvg-cairo src data pixmaps po share docs win32
-if BUILD_HELP 
-SUBDIRS += help
-endif
 
 DISTCLEANFILES =		\
 	intltool-extract	\
